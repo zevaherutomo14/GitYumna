@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="5dp">
+
+    <TextView
+        android:id="@+id/tvTempatArtikel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@android:color/black"
+        android:text="Tempat Artikel Berita"/>
+    <LinearLayout
+        android:layout_margin="@dimen/text_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="WebViewLayout">
+        <ImageView
+            android:id="@+id/ivPosterArtikel"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wvKontenBerita"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvTglAcara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Sabtu, 12 Maret 2018."/>
+</LinearLayout>

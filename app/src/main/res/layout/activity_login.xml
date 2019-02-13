@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#D3F7E4"
+    tools:context=".Login">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="@dimen/header"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext"
+        android:layout_margin="@dimen/text_margin"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:padding="@dimen/text_margin"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="#AFEEC9"
+            android:hint="Username"
+            tools:ignore="UnusedAttribute" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:inputType="textPassword"
+            android:layout_marginTop="@dimen/text_margin"
+            android:background="@drawable/rounded_edittext"
+            android:padding="@dimen/text_margin"
+            android:backgroundTint="#AFEEC9"
+            android:hint="Password"/>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MASUK"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="#B9F6CA"
+            android:textColor="#47525E"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_margin"
+                android:textColor="#47525E"
+                android:text="Belum Punya akun? "/>
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daftar"
+                android:background="@null"
+                android:textColor="#0076F0"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
