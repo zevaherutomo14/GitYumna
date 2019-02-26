@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 public class DetailArtActivity extends AppCompatActivity {
 
     ImageView ivGambarArtikel;
-    TextView tvTglAcara, tvWaktu;
+    TextView tvTglAcara, tvWaktu, tvTempat;
     WebView wvKontenArtikel;
 
     @Override
@@ -38,6 +38,7 @@ public class DetailArtActivity extends AppCompatActivity {
         ivGambarArtikel = (ImageView) findViewById(R.id.ivGambarArtikel);
         tvTglAcara = (TextView) findViewById(R.id.tvTglAcara);
         tvWaktu = (TextView) findViewById(R.id.tvWaktu);
+        tvTempat = (TextView) findViewById(R.id.tvTempat);
         //tvBerita = (TextView) findViewById(R.id.tvBerita);
         wvKontenArtikel = (WebView) findViewById(R.id.wvKontenArtikel);
 
@@ -52,9 +53,10 @@ public class DetailArtActivity extends AppCompatActivity {
         String catatan = getIntent().getStringExtra("ISI_ARTIKEL");
         String poster = getIntent().getStringExtra("FTO_ARTIKEL");
 
-        getSupportActionBar().setTitle(tempat);
+        getSupportActionBar().setTitle("Info Kajian");
 
-        tvTglAcara.setText("Oleh : " + tanggal);
+        tvTempat.setText(tempat);
+        tvTglAcara.setText(tanggal);
         tvWaktu.setText(waktu);
         //tvBerita.setText(isi_berita);
         Picasso.get().load(poster).into(ivGambarArtikel);
