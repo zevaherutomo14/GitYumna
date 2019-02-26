@@ -34,7 +34,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Tentang Mualaf"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_corner"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/syahadat"
@@ -42,14 +42,14 @@
             android:layout_height="wrap_content"
             android:text="Syahadat"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_corner"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/bersuci"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Bersuci"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_corner"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/wudhu"
@@ -57,14 +57,14 @@
             android:layout_height="wrap_content"
             android:text="Wudhu"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_corner"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/shalat"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Shalat"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/rounded_corner"
             android:textColor="@color/white"/>
     </LinearLayout>
 </LinearLayout>

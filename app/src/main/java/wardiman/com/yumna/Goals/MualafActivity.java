@@ -31,7 +31,7 @@ public class MualafActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.wvMualaf1);
         webView.getSettings().setJavaScriptEnabled(true);
 
-        String urlMualaf1 ="<iframe width=\"350\" height=\"350\" src=\"https://www.youtube.com/embed/PR8mbVqVtDE?ecver=1\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+        String urlMualaf1 ="<iframe width=\"350\" height=\"350\" src=\"https://www.youtube.com/embed/LH4Te_KiILY\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
         webView.loadData(urlMualaf1, "text/html; charset=utf-8", "UTF-8");
         webView.setWebChromeClient(new WebChromeClient(){
 
