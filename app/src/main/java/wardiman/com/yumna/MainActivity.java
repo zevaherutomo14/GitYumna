@@ -1,12 +1,20 @@
 package wardiman.com.yumna;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,8 +32,12 @@ import android.view.MenuItem;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 import java.util.logging.Handler;
@@ -43,7 +55,7 @@ public class MainActivity extends AppCompatActivity
 
     Button btn_logout;
     TextView txt_id, txt_username;
-    String id, username;
+    String id, username, email;
     SharedPreferences sharedPreferences;
 
     Intent intent;
@@ -53,6 +65,7 @@ public class MainActivity extends AppCompatActivity
 
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
+    public static final String TAG_EMAIL = "email";
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -76,6 +89,7 @@ public class MainActivity extends AppCompatActivity
 
         id = getIntent().getStringExtra(TAG_ID);
         username = getIntent().getStringExtra(TAG_USERNAME);
+        email = getIntent().getStringExtra(TAG_EMAIL);
 
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +123,12 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = (TextView) headerView.findViewById(R.id.navUsername);
+        TextView navEmail = (TextView) headerView.findViewById(R.id.navEmail);
+        navEmail.setText(email);
+        navUsername.setText(username);
+
 
        swipeRefreshLayout.post(new Runnable() {
            @Override
@@ -230,4 +250,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
