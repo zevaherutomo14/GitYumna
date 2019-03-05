@@ -19,6 +19,7 @@ import wardiman.com.yumna.response.ArtikelItem;
 
 public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.MyViewHolder> {
 
+//    hahhhahahhaha
 
     Context context;
     List<ArtikelItem> artikel;
