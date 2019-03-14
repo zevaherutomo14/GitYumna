@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -31,40 +31,38 @@
 
         <Button
             android:id="@+id/mualaf"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tentang Mualaf"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/btn1"
+            android:layout_margin="@dimen/activity_vertical_margin"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/syahadat"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Syahadat"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/btn2"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/bersuci"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bersuci"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/btn3"
+            android:layout_margin="@dimen/activity_vertical_margin"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/wudhu"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wudhu"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/btn4"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/shalat"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shalat"
-            android:background="@drawable/rounded_corner"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn5"
             android:textColor="@color/white"/>
     </LinearLayout>
 </LinearLayout>
