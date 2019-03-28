@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 public class DetailActivity extends AppCompatActivity {
 
     ImageView ivGambarBerita;
-    TextView tvTglTerbit, tvPenulis, tvBerita;
+    TextView tvTglTerbit, tvPenulis, tvBerita, tvJudulBerita;
     WebView wvKontenBerita;
 
     @Override
@@ -38,6 +38,7 @@ public class DetailActivity extends AppCompatActivity {
         ivGambarBerita = findViewById(R.id.ivGambarBerita);
         tvTglTerbit = findViewById(R.id.tvTglTerbit);
         tvPenulis = findViewById(R.id.tvPenulis);
+        tvJudulBerita = (TextView) findViewById(R.id.tvJudulBerita);
         //tvBerita = (TextView) findViewById(R.id.tvBerita);
         wvKontenBerita = findViewById(R.id.wvKontenBerita);
 
@@ -52,8 +53,9 @@ public class DetailActivity extends AppCompatActivity {
         String isi_berita = getIntent().getStringExtra("ISI_BERITA");
         String foto_berita = getIntent().getStringExtra("FTO_BERITA");
 
-        getSupportActionBar().setTitle(judul_berita);
+        getSupportActionBar().setTitle("Artikel Yumna");
 
+        tvJudulBerita.setText(judul_berita);
         tvPenulis.setText("Oleh : " + penulis_berita);
         tvTglTerbit.setText(tanggal_berita);
         //tvBerita.setText(isi_berita);

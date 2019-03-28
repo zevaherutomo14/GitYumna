@@ -8,21 +8,31 @@
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_detail">
 
-
+    <!-- di java ganti di detail activity-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
         android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvJudulBerita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:textSize="25sp"
+            android:text="Blala"
+            android:textColor="@color/black"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/text_margin"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,6 +63,14 @@
             </LinearLayout>
 
         </LinearLayout>
+        <ImageView
+            android:id="@+id/ivGambarBerita"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="20dp"/>
+
         <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
