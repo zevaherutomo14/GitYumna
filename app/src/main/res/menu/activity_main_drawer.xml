@@ -6,33 +6,32 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Berita" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Artikel" />
+            android:icon="@drawable/homebr"
+            android:title="Beranda" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/starbr"
             android:title="Goals" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:icon="@drawable/question"
+            android:title="Konsultasi" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/datebr"
+            android:title="info Kajian Mualaf" />
+        <item
+            android:id="@+id/nav_pengaturan"
+            android:icon="@drawable/setting"
+            android:title="Pengaturan" />
+        <item
+            android:id="@+id/nav_tentang"
+            android:icon="@drawable/tetang"
+            android:title="Tentang" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Logout" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Logout" />
-        </menu>
-    </item>
 
 </menu>
