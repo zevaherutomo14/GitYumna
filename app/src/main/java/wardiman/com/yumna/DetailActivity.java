@@ -26,15 +26,6 @@ public class DetailActivity extends AppCompatActivity {
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         ivGambarBerita = findViewById(R.id.ivGambarBerita);
         tvTglTerbit = findViewById(R.id.tvTglTerbit);
         tvPenulis = findViewById(R.id.tvPenulis);
@@ -56,7 +47,7 @@ public class DetailActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Artikel Yumna");
 
         tvJudulBerita.setText(judul_berita);
-        tvPenulis.setText("Oleh : " + penulis_berita);
+        tvPenulis.setText(penulis_berita);
         tvTglTerbit.setText(tanggal_berita);
         //tvBerita.setText(isi_berita);
         Picasso.get().load(foto_berita).into(ivGambarBerita);
