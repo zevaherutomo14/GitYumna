@@ -62,8 +62,11 @@
             android:name=".Goals.WudhuActivity"
             tools:ignore="InnerclassSeparator" />
         
-        <activity android:name=".Goals.activity_kuismualaf"
-            tools:ignore="InnerclassSeparator"/>
+        <activity android:name=".Goals.activity_kuismualaf"/>
+        <activity android:name=".Goals.activity_kuissyahadat"/>
+        <activity android:name=".Goals.activity_kuisshalat"/>
+        <activity android:name=".Goals.activity_kuiswudhu"/>
+        <activity android:name=".Goals.activity_kuisbersuci"/>
     </application>
 
 </manifest>

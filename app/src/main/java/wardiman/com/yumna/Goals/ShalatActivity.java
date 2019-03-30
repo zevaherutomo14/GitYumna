@@ -1,13 +1,19 @@
 package wardiman.com.yumna.Goals;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import wardiman.com.yumna.R;
 
 public class ShalatActivity extends AppCompatActivity {
+
+    Button btn_kuisshalat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,14 @@ public class ShalatActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+
+        btn_kuisshalat = (Button) findViewById(R.id.btn_kuisshalat);
+        btn_kuisshalat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ShalatActivity.this, activity_kuisshalat.class));
+            }
+        });
     }
 
     @Override

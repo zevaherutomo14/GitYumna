@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context=".Goals.BersuciActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -20,4 +22,22 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <include layout="@layout/content_bersuci"></include>
+
+        <Button
+            android:id="@+id/btn_kuisbersuci"
+            android:layout_width="match_parent"
+            android:text="Ikuti Kuis Sekarang?"
+            android:textColor="#FF47525E"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_ikutikuis"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 </LinearLayout>
