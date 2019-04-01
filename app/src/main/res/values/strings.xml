@@ -30,4 +30,16 @@ Fenomena yang berkembang selama ini tentang penggantian nama oleh beberapa muala
 
 Sungguh beruntung orang-orang yang telah menerima hidayah dari Allah SWT, lalu mereka memutuskan untuk menjadi seorang muslim. Mengapa dikatakan beruntung? Karena selama mereka masih berada dalam kekafiran, maka apapun yang ia kerjakan selama di dunia tidak akan mendapatkan balasan kebaikan dari Allah SWT, dikarenakan orang-orang kafir telah mengingkari keimanannya kepada Allah SWT, di mana keimanan kepada Allah SWT merupakan perkara yang mendasar dalam kehidupan seseorang. Dan itu akan menjadikan mereka termasuk ke dalam golongan orang-orang yang merugi.
     </string>
+
+    <string name="compass_dial" translatable="false">Compass Dial</string>
+    <string name="compass_hands" translatable="false">Compass Hands</string>
+
+    <string name="sotw_north">N</string>
+    <string name="sotw_east">E</string>
+    <string name="sotw_south">S</string>
+    <string name="sotw_west">W</string>
+    <string name="sotw_northeast">NE</string>
+    <string name="sotw_northwest">NW</string>
+    <string name="sotw_southeast">SE</string>
+    <string name="sotw_southwest">SW</string>
 </resources>
