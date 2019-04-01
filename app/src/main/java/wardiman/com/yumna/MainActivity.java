@@ -45,6 +45,7 @@ import java.util.logging.SocketHandler;
 
 import retrofit2.Callback;
 import retrofit2.Response;
+import wardiman.com.yumna.Compas.CompassActivity;
 import wardiman.com.yumna.network.ApiServices;
 import wardiman.com.yumna.network.Server;
 import wardiman.com.yumna.response.BeritaItem;
@@ -228,6 +229,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             intent = new Intent(MainActivity.this, GoalsActivity.class);
             startActivity(intent);
+        } else if (id == R.id.nav_compas){
+            intent = new Intent(MainActivity.this, CompassActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_manage) {
 
         }  else if (id == R.id.nav_send) {
