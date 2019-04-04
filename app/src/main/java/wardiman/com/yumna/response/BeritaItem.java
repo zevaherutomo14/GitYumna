@@ -8,7 +8,7 @@ public class BeritaItem {
     @SerializedName("penulis")
     private String penulis;
 
-    @SerializedName("foto")
+    @SerializedName("images")
     private String foto;
 
     @SerializedName("id")
