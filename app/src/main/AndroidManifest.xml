@@ -16,7 +16,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Compas.CompassActivity"/>
+        <activity
+            android:name=".Quiz.SkorActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.PilihanGandaActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.EssayActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Compas.CompassActivity"
+            tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".Login"
             android:label="@string/app_name"
@@ -61,11 +75,21 @@
         <activity
             android:name=".Goals.WudhuActivity"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name=".Goals.activity_kuismualaf" />
-        <activity android:name=".Goals.activity_kuissyahadat" />
-        <activity android:name=".Goals.activity_kuisshalat" />
-        <activity android:name=".Goals.activity_kuiswudhu" />
-        <activity android:name=".Goals.activity_kuisbersuci" />
+        <activity
+            android:name=".Goals.activity_kuismualaf"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Goals.activity_kuissyahadat"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Goals.activity_kuisshalat"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Goals.activity_kuiswudhu"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Goals.activity_kuisbersuci"
+            tools:ignore="InnerclassSeparator" />
     </application>
 
 </manifest>

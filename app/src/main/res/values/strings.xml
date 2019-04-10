@@ -42,4 +42,8 @@ Sungguh beruntung orang-orang yang telah menerima hidayah dari Allah SWT, lalu m
     <string name="sotw_northwest">NW</string>
     <string name="sotw_southeast">SE</string>
     <string name="sotw_southwest">SW</string>
+
+    <string name="tvJbBenar">Alhamdulilah Jawaban Anda Sudah Benar</string>
+    <string name="tvLanjut">Silahkan Lanjut Soal Berikutnya</string>
+    <string name="tvJbSalah">Jawaban Anda Masih salah</string>
 </resources>
