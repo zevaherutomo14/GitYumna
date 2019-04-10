@@ -30,24 +30,27 @@
         android:orientation="vertical">
 
         <Button
+            android:outlineSpotShadowColor="@color/black"
             android:id="@+id/mualaf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn1"
+            android:background="@drawable/group_1"
             android:layout_margin="@dimen/activity_vertical_margin"
             android:textColor="@color/white"/>
         <Button
+            android:outlineSpotShadowColor="@color/black"
             android:id="@+id/syahadat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn2"
+            android:background="@drawable/group_3"
             android:textColor="@color/white"/>
         <Button
+            android:outlineSpotShadowColor="@color/black"
             android:id="@+id/bersuci"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn3"
+            android:background="@drawable/group_2"
             android:layout_margin="@dimen/activity_vertical_margin"
             android:textColor="@color/white"/>
         <Button
@@ -55,14 +58,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn4"
+            android:background="@drawable/group_4"
             android:textColor="@color/white"/>
         <Button
             android:id="@+id/shalat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn5"
+            android:background="@drawable/group_5"
             android:textColor="@color/white"/>
     </LinearLayout>
 </LinearLayout>
