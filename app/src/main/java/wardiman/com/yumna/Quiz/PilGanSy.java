@@ -57,6 +57,10 @@ public class PilGanSy extends AppCompatActivity {
 
     private void setonten() {
         mrbPilihan.clearCheck();
+        //syahadat berarti nama array nya
+        //getsyahadat : pengambilan dari data syahadat
+        //Sesuaikan getPilJwbSy1 dengan yng lain
+        //Sesuaikan getJwbBnrSyahadat dengan yg lain
         arr = soalPG.syahadat.length;
         if (x >= arr){
             String jumlahSkor = String.valueOf(skor);

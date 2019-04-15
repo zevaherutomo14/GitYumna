@@ -95,6 +95,7 @@
             tools:ignore="InnerclassSeparator" />
 
         <activity android:name=".Quiz.PilGanSy" />
+        <activity android:name=".Quiz.EssaySY" />
     </application>
 
 </manifest>
