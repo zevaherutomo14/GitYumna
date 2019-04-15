@@ -226,6 +226,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             intent = new Intent(MainActivity.this, ArtikelActivity.class);
             startActivity(intent);
+        }else if (id == R.id.nav_jadwalshalat) {
+            intent = new Intent(MainActivity.this, JadwalShalatActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
             intent = new Intent(MainActivity.this, GoalsActivity.class);
             startActivity(intent);
