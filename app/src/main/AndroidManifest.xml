@@ -93,6 +93,8 @@
         <activity
             android:name=".Goals.activity_kuisbersuci"
             tools:ignore="InnerclassSeparator" />
+
+        <activity android:name=".Quiz.PilGanSy" />
     </application>
 
 </manifest>
