@@ -1,88 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:background="#D3F7E4"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#00E6C2"
     tools:context=".Login">
-
-    <RelativeLayout
-    android:layout_width="195dp"
-    android:layout_height="185dp"
-    android:background="@drawable/rounded_logo"
-    android:layout_gravity="center">
-    <ImageView
-        android:layout_width="185dp"
-        android:layout_height="175dp"
-        android:background="@drawable/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
-    </RelativeLayout>`
+    <include layout="@layout/content_login"></include>
 
     <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:background="#ccc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_edittext"
-        android:layout_margin="@dimen/text_margin"
-        android:orientation="vertical">
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_margin"
-            android:layout_marginEnd="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_vertical_margin"
-            android:padding="@dimen/text_margin"
-            android:background="@drawable/rounded_edittext"
-            android:backgroundTint="#AFEEC9"
-            android:hint="Username"
-            tools:ignore="UnusedAttribute" />
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_vertical_margin"
-            android:layout_marginEnd="@dimen/activity_vertical_margin"
-            android:inputType="textPassword"
-            android:layout_marginTop="@dimen/text_margin"
-            android:background="@drawable/rounded_edittext"
-            android:padding="@dimen/text_margin"
-            android:backgroundTint="#AFEEC9"
-            android:hint="Password"/>
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MASUK"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edittext"
-            android:backgroundTint="#B9F6CA"
-            android:textColor="#47525E"
-            android:layout_margin="@dimen/text_margin"/>
-
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:layout_marginStart="@dimen/text_margin"
-                android:textColor="#47525E"
+                android:textColor="@color/white"
                 android:text="Belum Punya akun? "/>
             <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
                 android:text="Daftar"
                 android:background="@null"
                 android:textColor="#0076F0"/>
         </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
