@@ -2,8 +2,11 @@ package wardiman.com.yumna.Quiz;
 
 public class SoalEssay {
     public String pertanyaan[] = {
-            "Siapa nama presiden Indonesia yang pertama ?",
-            "Ideologi dasar bagi negara Indonesia adalah ...",
+            "Seseorang menjadi mualaf adalah karena kebiasaan yang dimiliki orang tersebut untuk mempelajari tentang ajaran agama islam, di mana pada akhirnya mereka merasa mendapatkan hidayah dari Allah SWT dan kemudian memutuskan untuk masuk islam, dari pernyataan di atas salah satu alasan menjeadi mualaf karena ...",
+            "Jika Seseorang yang memutuskan menjadi mualaf meskipun hal tersebut dikarenakan cinta atau pernikahan, salah satu alasan menjeadi mualaf karena ...",
+            "Allah SWT akan memberikan Rizki yang cukup bagi mereka yang masuk islam, dan Allah SWT akan menjadikannya hamba Allah yang qana’ah. semua itu termasuk pada ... dan Keutamaan menjadi seorang Mualaf",
+            "Kalimat pertama dalam syahadat berisi ASYHADU AN LA ILAHA ILLA ALLAH yang berarti tuhan kita hanya satu yaitu...",
+            "Pada Kalimat Kedua wa ?ašhadu ?anna mu?ammadar rasulu l-Lah, siapa yang kita yakini ialah utusan Allah...",
             "Bhinneka Tunggal Ika mempunyai arti ...",
             "Ibukota negara Indonesia saat ini adalah ...",
             "Siapa yang menjajah Indonesia selama 350 tahun ?",
@@ -14,15 +17,11 @@ public class SoalEssay {
     };
 
     public String syahadat[] = {
-            "XXXSiapa nama presiden Indonesia yang pertama ?",
-            "XXXIdeologi dasar bagi negara Indonesia adalah ...",
-            "XXXBhinneka Tunggal Ika mempunyai arti ...",
-            "XXXIbukota negara Indonesia saat ini adalah ...",
-            "XXXSiapa yang menjajah Indonesia selama 350 tahun ?",
-            "XXXSaat masa penjajahan, senjata yang biasa digunakan oleh pahlawan Indonesia adalah ...",
-            "XXXMonumen pada gambar sering disebut ...",
-            "XXXTeks yang dibacakan Ir. Soekarno yang menyatakan Indonesia merdeka dalah teks ...",
-            "XXXPulau terbesar di Indonesia adalah ...",
+            "apa yang dimaksud syahadatain",
+            "sebutkanlah syahadat tauhid",
+            "sebutkanlah syahadat rasul",
+            "apa syarat syah mengucap syahadatain",
+            "apa arti wa asyhadu anna muhammadar rasulullah",
     };
 
     private String image[] = {
