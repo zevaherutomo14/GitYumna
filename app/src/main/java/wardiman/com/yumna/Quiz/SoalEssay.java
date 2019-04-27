@@ -14,15 +14,11 @@ public class SoalEssay {
     };
 
     public String syahadat[] = {
-            "XXXSiapa nama presiden Indonesia yang pertama ?",
-            "XXXIdeologi dasar bagi negara Indonesia adalah ...",
-            "XXXBhinneka Tunggal Ika mempunyai arti ...",
-            "XXXIbukota negara Indonesia saat ini adalah ...",
-            "XXXSiapa yang menjajah Indonesia selama 350 tahun ?",
-            "XXXSaat masa penjajahan, senjata yang biasa digunakan oleh pahlawan Indonesia adalah ...",
-            "XXXMonumen pada gambar sering disebut ...",
-            "XXXTeks yang dibacakan Ir. Soekarno yang menyatakan Indonesia merdeka dalah teks ...",
-            "XXXPulau terbesar di Indonesia adalah ...",
+            "apa yang dimaksud syahadatain",
+            "sebutkanlah syahadat tauhid",
+            "sebutkanlah syahadat rasul",
+            "apa syarat syah mengucap syahadatain",
+            "apa arti wa asyhadu anna muhammadar rasulullah",
     };
 
     private String image[] = {
