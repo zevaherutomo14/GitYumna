@@ -46,4 +46,7 @@ Sungguh beruntung orang-orang yang telah menerima hidayah dari Allah SWT, lalu m
     <string name="tvJbBenar">Alhamdulilah Jawaban Anda Sudah Benar</string>
     <string name="tvLanjut">Silahkan Lanjut Soal Berikutnya</string>
     <string name="tvJbSalah">Jawaban Anda Masih salah</string>
+
+    <string name="minimum_password">Password too short, enter minimum 7 characters!</string>
+    <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
 </resources>

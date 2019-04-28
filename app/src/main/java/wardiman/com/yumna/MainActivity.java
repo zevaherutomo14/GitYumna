@@ -37,6 +37,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import org.w3c.dom.Text;
 
 import java.util.List;
@@ -54,19 +57,14 @@ import wardiman.com.yumna.response.ResponseBerita;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SwipeRefreshLayout.OnRefreshListener {
 
-    Button btn_logout;
     TextView txt_id, txt_username;
-    String id, username, email;
-    SharedPreferences sharedPreferences;
-
+    String mail;
+    private FirebaseAuth auth;
+    private FirebaseAuth.AuthStateListener authListener;
     Intent intent;
 
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
-
-    public static final String TAG_ID = "id";
-    public static final String TAG_USERNAME = "username";
-    public static final String TAG_EMAIL = "email";
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -80,41 +78,25 @@ public class MainActivity extends AppCompatActivity
         swipeRefreshLayout.setColorSchemeColors(R.color.colorAccent);
         swipeRefreshLayout.setOnRefreshListener(this);
 
+        auth = FirebaseAuth.getInstance();
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        authListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user == null) {
+                    // user auth state is changed - user is null
+                    // launch login activity
+                    startActivity(new Intent(MainActivity.this, Login.class));
+                    finish();
+                }
+            }
+        };
+
         recyclerView = findViewById(R.id.rvListBerita);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         tampilBerita();
-
-        btn_logout = findViewById(R.id.btn_Logout);
-
-        sharedPreferences = getSharedPreferences(Login.my_shared_preference, Context.MODE_PRIVATE);
-
-        id = getIntent().getStringExtra(TAG_ID);
-        username = getIntent().getStringExtra(TAG_USERNAME);
-        email = getIntent().getStringExtra(TAG_EMAIL);
-
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putBoolean(Login.session_status, false);
-                editor.putString(TAG_ID, null);
-                editor.putString(TAG_USERNAME, null);
-                editor.apply();
-
-                Intent intent = new Intent(MainActivity.this, Login.class);
-                finish();
-                startActivity(intent);
-            }
-        });
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -126,9 +108,19 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View headerView = navigationView.getHeaderView(0);
         TextView navUsername = (TextView) headerView.findViewById(R.id.navUsername);
-        TextView navEmail = (TextView) headerView.findViewById(R.id.navEmail);
-        navEmail.setText(email);
-        navUsername.setText(username);
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null){
+//            String name = user.getDisplayName();
+            String mail = user.getEmail();
+            boolean emailVerified = user.isEmailVerified();
+
+            String uid = user.getUid();
+
+            navUsername.setText(mail);
+        }
+
+//        TextView navEmail = (TextView) headerView.findViewById(R.id.navEmail);
+
 
 
        swipeRefreshLayout.post(new Runnable() {
@@ -239,22 +231,30 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
 
         }  else if (id == R.id.nav_send) {
-
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putBoolean(Login.session_status, false);
-            editor.putString(TAG_ID, null);
-            editor.putString(TAG_USERNAME, null);
-            editor.apply();
-
-            Intent intent = new Intent(MainActivity.this, Login.class);
-            finish();
-            startActivity(intent);
-
+           signOut();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void signOut() {
+        auth.signOut();
+
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        auth.addAuthStateListener(authListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (authListener != null) {
+            auth.removeAuthStateListener(authListener);
+        }
     }
 
 }

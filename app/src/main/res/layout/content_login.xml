@@ -42,13 +42,14 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/username1"/>
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_vertical_margin"
                 android:padding="@dimen/text_margin"
                 android:backgroundTint="@color/white"
-                android:hint="Username"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 tools:ignore="UnusedAttribute" />
@@ -88,6 +89,7 @@
             android:textColor="@color/white"
             android:layout_marginTop="@dimen/text_margin"/>
         <Button
+            android:id="@+id/btnForgot"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
@@ -97,6 +99,15 @@
             android:textColor="@color/white"
             android:text="Lupa sandi? "/>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
+
     </LinearLayout>
+
 
 </LinearLayout>

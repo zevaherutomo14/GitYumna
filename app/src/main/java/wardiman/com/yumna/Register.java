@@ -39,27 +39,12 @@ public class Register extends AppCompatActivity {
     private Button btn_Register, btn_Login, btn_forgot;
     private EditText txt_email, txt_password, txt_confirm;
     private Intent intent;
-
-//    int success;
-    ConnectivityManager conMngr;
     private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        conMngr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        {
-            if (conMngr.getActiveNetworkInfo() != null
-                    && conMngr.getActiveNetworkInfo().isConnected()
-                    && conMngr.getActiveNetworkInfo().isAvailable()){
-            } else {
-                Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_LONG).show();
-            }
-        }
-
-//        if(password.getText().toString().equals(confirmpassword.getText().toString())){
 
         auth = FirebaseAuth.getInstance();
         btn_Login = findViewById(R.id.btnLogin);
@@ -69,6 +54,12 @@ public class Register extends AppCompatActivity {
         txt_email = findViewById(R.id.email);
         txt_password = findViewById(R.id.password);
         txt_confirm = findViewById(R.id.confirm);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        if (progressBar != null) {
+            progressBar.setVisibility(View.GONE);
+        }
 
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,32 +97,33 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                if (password.length() < 7) {
+                if (password.length() < 6) {
                     Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-
-                progressBar.setVisibility(View.VISIBLE);
-                //create user
-                auth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(Register.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
-                                // If sign in fails, display a message to the user. If sign in succeeds
-                                // the auth state listener will be notified and logic to handle the
-                                // signed in user can be handled in the listener.
-                                if (!task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "Authentication failed." + task.getException(),
-                                            Toast.LENGTH_SHORT).show();
-                                } else {
-                                    startActivity(new Intent(Register.this, MainActivity.class));
-                                    finish();
+                if(txt_password.getText().toString().equals(txt_confirm.getText().toString())) {
+                    progressBar.setVisibility(View.VISIBLE);
+                    //create user
+                    auth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    Toast.makeText(Register.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                    progressBar.setVisibility(View.GONE);
+                                    // If sign in fails, display a message to the user. If sign in succeeds
+                                    // the auth state listener will be notified and logic to handle the
+                                    // signed in user can be handled in the listener.
+                                    if (!task.isSuccessful()) {
+                                        Toast.makeText(Register.this, "Authentication failed." + task.getException(),
+                                                Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        startActivity(new Intent(Register.this, MainActivity.class));
+                                        finish();
+                                    }
                                 }
-                            }
-                        });
+                            });
+                }
             }
         });
     }

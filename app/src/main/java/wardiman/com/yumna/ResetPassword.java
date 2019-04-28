@@ -35,6 +35,12 @@ public class ResetPassword extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        if (progressBar != null) {
+            progressBar.setVisibility(View.GONE);
+        }
+
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
