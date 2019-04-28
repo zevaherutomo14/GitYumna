@@ -29,7 +29,7 @@ import wardiman.com.yumna.network.Server;
 public class Register extends AppCompatActivity {
 
     ProgressDialog pDialog;
-    Button btn_Register, btn_Login;
+    Button btn_Register, btn_Login, btn_forgot;
     EditText txt_username, txt_email, txt_password, txt_confirm;
     Intent intent;
 
@@ -61,6 +61,7 @@ public class Register extends AppCompatActivity {
 
         btn_Login = findViewById(R.id.btnLogin);
         btn_Register = findViewById(R.id.btnRegister);
+        btn_forgot = findViewById(R.id.btnForgot);
         txt_username = findViewById(R.id.username);
         txt_email = findViewById(R.id.email);
         txt_password = findViewById(R.id.password);
@@ -74,6 +75,15 @@ public class Register extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Register.this, ResetPassword.class);
+                startActivity(intent);
+            }
+        });
+
 
         btn_Register.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,6 +9,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:name=".app.AppController"
         android:allowBackup="true"
@@ -18,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".JadwalShalatActivity"></activity>
+        <activity android:name=".ResetPassword"></activity>
+        <activity android:name=".JadwalShalatActivity" />
         <activity
             android:name=".Quiz.SkorActivity"
             android:screenOrientation="portrait"
@@ -93,7 +98,6 @@
         <activity
             android:name=".Goals.activity_kuisbersuci"
             tools:ignore="InnerclassSeparator" />
-
         <activity android:name=".Quiz.PilGanSy" />
         <activity android:name=".Quiz.EssaySY" />
     </application>

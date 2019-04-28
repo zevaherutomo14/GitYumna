@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "747241184544",
+    "firebase_url": "https://yumna-3684d.firebaseio.com",
+    "project_id": "yumna-3684d",
+    "storage_bucket": "yumna-3684d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747241184544:android:d31fe8f4d79e1004",
+        "android_client_info": {
+          "package_name": "wardiman.com.yumna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747241184544-3cle6e8ki1t836a6egu8ui3arq3irsju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "wardiman.com.yumna",
+            "certificate_hash": "764a30226c60add85df4aa35b2d8e1b1c89eef98"
+          }
+        },
+        {
+          "client_id": "747241184544-u9eofi7e8ca661a9k4hv80bqph1f0a1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKmDGOj7Gk-e6FoU4B2sGFpWw9nXTO7zY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747241184544-u9eofi7e8ca661a9k4hv80bqph1f0a1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

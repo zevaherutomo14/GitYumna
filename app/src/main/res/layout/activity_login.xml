@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#00E6C2"
     tools:context=".Login">
-    <include layout="@layout/content_login"></include>
+    <include layout="@layout/content_login"/>
 
     <LinearLayout
         android:layout_alignParentBottom="true"
