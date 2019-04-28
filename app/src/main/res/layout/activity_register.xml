@@ -26,19 +26,6 @@
         android:layout_margin="@dimen/text_margin"
         android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:padding="@dimen/text_margin"
-        android:background="@drawable/rounded_edittext"
-        android:backgroundTint="#AFEEC9"
-        android:textColor="@color/black"
-        android:inputType="textEmailAddress"
-        android:layout_marginStart="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_vertical_margin"
-        android:singleLine="true"/>
 
     <EditText
         android:id="@+id/email"
@@ -129,4 +116,11 @@
             android:textColor="#47525E"
             android:layout_margin="@dimen/text_margin"/>
     </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
 </LinearLayout>

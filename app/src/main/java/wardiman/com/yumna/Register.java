@@ -4,18 +4,25 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,21 +35,14 @@ import wardiman.com.yumna.network.Server;
 
 public class Register extends AppCompatActivity {
 
-    ProgressDialog pDialog;
-    Button btn_Register, btn_Login, btn_forgot;
-    EditText txt_username, txt_email, txt_password, txt_confirm;
-    Intent intent;
+    private ProgressBar progressBar;
+    private Button btn_Register, btn_Login, btn_forgot;
+    private EditText txt_email, txt_password, txt_confirm;
+    private Intent intent;
 
-    int success;
+//    int success;
     ConnectivityManager conMngr;
-
-    private String url = Server.URL + "register.php";
-
-    private static final String TAG = Register.class.getSimpleName();
-
-    private static final String TAG_SUCCESS = "success";
-    private static final String TAG_MESSAGE = "message";
-    String tag_json_ob = "json_obj_req";
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +59,13 @@ public class Register extends AppCompatActivity {
             }
         }
 
+//        if(password.getText().toString().equals(confirmpassword.getText().toString())){
+
+        auth = FirebaseAuth.getInstance();
         btn_Login = findViewById(R.id.btnLogin);
         btn_Register = findViewById(R.id.btnRegister);
         btn_forgot = findViewById(R.id.btnForgot);
-        txt_username = findViewById(R.id.username);
+//        txt_username = findViewById(R.id.username);
         txt_email = findViewById(R.id.email);
         txt_password = findViewById(R.id.password);
         txt_confirm = findViewById(R.id.confirm);
@@ -88,87 +91,55 @@ public class Register extends AppCompatActivity {
         btn_Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = txt_username.getText().toString();
-                String email = txt_email.getText().toString();
-                String password = txt_password.getText().toString();
-                String confirm  = txt_confirm.getText().toString();
-                if (conMngr.getActiveNetworkInfo() != null
-                        && conMngr.getActiveNetworkInfo().isConnected()
-                        && conMngr.getActiveNetworkInfo().isAvailable()){
-                    checkRegister(username,email,password,confirm);
-                } else {
-                    Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_LONG).show();
+//                String username = txt_username.getText().toString();
+                String email = txt_email.getText().toString().trim();
+                String password = txt_password.getText().toString().trim();
+                String confirm = txt_confirm.getText().toString().trim();
+
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (password.length() < 7) {
+                    Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+                progressBar.setVisibility(View.VISIBLE);
+                //create user
+                auth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                Toast.makeText(Register.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                                // If sign in fails, display a message to the user. If sign in succeeds
+                                // the auth state listener will be notified and logic to handle the
+                                // signed in user can be handled in the listener.
+                                if (!task.isSuccessful()) {
+                                    Toast.makeText(Register.this, "Authentication failed." + task.getException(),
+                                            Toast.LENGTH_SHORT).show();
+                                } else {
+                                    startActivity(new Intent(Register.this, MainActivity.class));
+                                    finish();
+                                }
+                            }
+                        });
             }
         });
     }
 
-    private void checkRegister(final String username, final String email, final String password, final String confirm){
-        pDialog = new ProgressDialog(this);
-        pDialog.setCancelable(false);
-        pDialog.setMessage("Register ....");
-        showDialog();
-
-        StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Log.e(TAG, "Register Response: " + response);
-                hideDialog();
-
-                try {
-                    JSONObject jObj = new JSONObject(response);
-                    success = jObj.getInt(TAG_SUCCESS);
-                    if (success == 1) {
-                        Log.e("Successfully Register", jObj.toString());
-
-                        Toast.makeText(getApplicationContext(), jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
-
-                        txt_username.setText("");
-                        txt_email.setText("");
-                        txt_password.setText("");
-                        txt_confirm.setText("");
-                    } else {
-                        Toast.makeText(getApplicationContext(), jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e(TAG,"Login Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_LONG).show();
-
-                hideDialog();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() {
-                //polimorphism
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("username",username);
-                params.put("email", email);
-                params.put("password", password);
-                params.put("confirm_password", confirm);
-                return params;
-            }
-        };
-
-        AppController.getInstance().addToRequestQueue(strReq, tag_json_ob);
-
-
-    }
-
-    private void hideDialog() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
-    }
-
-    private void showDialog() {
-        if (!pDialog.isShowing())
-            pDialog.show();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
