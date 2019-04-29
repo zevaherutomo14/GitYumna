@@ -4,105 +4,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".JadwalShalatActivity">
-
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:text="Lokasi"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_lokasi_value"
-            android:text="Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_logo"
+            android:gravity="center"
+            android:paddingVertical="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin">
 
-        <TextView
-            android:layout_marginTop="8dp"
-            android:text="Jadwal"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/black"
+                android:text="Lokasi"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/tv_jadwal"
-            android:text="Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tv_lokasi_value"
+                android:text="Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:layout_marginTop="8dp"
-            android:text="Fajr"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:text="Tanggal"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/tv_fajr_value"
-            android:text="Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tv_jadwal"
+                android:text="Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@drawable/layout_background_jadwal_shalat">
+                <TextView
+                    android:width="0dp"
+                    android:textSize="20sp"
+                    android:layout_margin="8dp"
+                    android:textAlignment="center"
+                    android:text="Fajr"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:id="@+id/tv_fajr_value"
+                    android:text="Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
 
 
-        <TextView
-            android:layout_marginTop="8dp"
-            android:text="Dhuhr"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@drawable/layout_background_jadwal_shalat">
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:text="Dhuhr"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/tv_dhuhr_value"
-            android:text="Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+                    <TextView
+                        android:textSize="20sp"
+                        android:width="0dp"
+                        android:textAlignment="center"
+                        android:layout_margin="8dp"
+                        android:id="@+id/tv_dhuhr_value"
+                        android:text="Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+            </LinearLayout>
 
-        <TextView
-            android:layout_marginTop="8dp"
-            android:text="Asr"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/tv_asr_value"
-            android:text="Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@drawable/layout_background_jadwal_shalat">
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:text="Asr"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
 
-        <TextView
-            android:layout_marginTop="8dp"
-            android:text="Maghrib"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_asr_value"
+                    android:text="Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_maghrib_value"
-            android:text="Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layout_background_jadwal_shalat"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:layout_margin="8dp"
+                    android:textAlignment="center"
+                    android:text="Maghrib"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
 
-        <TextView
-            android:layout_marginTop="8dp"
-            android:text="Isha"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:id="@+id/tv_maghrib_value"
+                    android:text="Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
 
-        <TextView
-            android:id="@+id/tv_isha_value"
-            android:text="Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layout_background_jadwal_shalat"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:text="Isha"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:textSize="20sp"
+                    android:width="0dp"
+                    android:textAlignment="center"
+                    android:layout_margin="8dp"
+                    android:id="@+id/tv_isha_value"
+                    android:text="Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_refresh"
         android:src="@drawable/ic_refresh_white_24dp"
@@ -111,5 +219,4 @@
         android:text="Hello World!"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"/>
-
 </RelativeLayout>
