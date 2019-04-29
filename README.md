@@ -20,3 +20,6 @@ Fitur yang telah ada ialah:
 -   Kompas
 -   Jadwal Solat
 -   Quiz
+
+## Activity Diagram
+<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Act%20diagram%20Yumna.png"></h1>
