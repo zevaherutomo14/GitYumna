@@ -5,8 +5,8 @@ Tools yang digunakan untuk membangun aplikasi ini ialah :
 -   Text Editor (Atom)
 
 Bahasa pemrograman yang digunakan :
--	  Java
--	  XML
+-   Java
+-   XML
 - 	PHp
 - 	SQL
 -   HTML
