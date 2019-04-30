@@ -2,6 +2,7 @@ package wardiman.com.yumna;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,8 +19,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.telecom.Call;
 import android.util.Log;
+import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -34,6 +35,8 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +49,7 @@ import java.util.List;
 import java.util.logging.Handler;
 import java.util.logging.SocketHandler;
 
+import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import wardiman.com.yumna.Compas.CompassActivity;
@@ -66,6 +70,12 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
 
+    private ApiServices apiServices;
+    private List<BeritaItem> berita;
+    AdapterBerita adapter;
+
+    ProgressBar progressBar;
+
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +83,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        progressBar = findViewById(R.id.prograss);
 
         swipeRefreshLayout = findViewById(R.id.swipe);
         swipeRefreshLayout.setColorSchemeColors(R.color.colorAccent);
@@ -96,7 +108,7 @@ public class MainActivity extends AppCompatActivity
 
         recyclerView = findViewById(R.id.rvListBerita);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        tampilBerita();
+        tampilBerita("");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -128,7 +140,7 @@ public class MainActivity extends AppCompatActivity
            public void run() {
                swipeRefreshLayout.setRefreshing(true);
 
-               tampilBerita();
+               tampilBerita("");
            }
        });
 
@@ -136,39 +148,34 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onRefresh() {
-        tampilBerita();
+        tampilBerita("");
     }
 
-    private void tampilBerita() {
+    private void tampilBerita(String key) {
 
         swipeRefreshLayout.setRefreshing(true);
-        ApiServices api = Server.getInstance();
+        apiServices = Server.getApiClient().create(ApiServices.class);
 
-        retrofit2.Call<ResponseBerita> beritaCall = api.request_show_all_berita();
+        Call<List<BeritaItem>> beritaCall = apiServices.getContact("users",key);
 
-        beritaCall.enqueue(new Callback<ResponseBerita>() {
+        beritaCall.enqueue(new Callback<List<BeritaItem>>() {
             @Override
-            public void onResponse(retrofit2.Call<ResponseBerita> call, Response<ResponseBerita> response) {
-                if (response.isSuccessful()){
-                    Log.d("response api", response.body().toString());
-                    List<BeritaItem> data_berita = response.body().getBerita();
-                    boolean status = response.body().isStatus();
+            public void onResponse(retrofit2.Call<List<BeritaItem>> call, Response<List<BeritaItem>> response) {
 
-                    if (status) {
-                        AdapterBerita adapter = new AdapterBerita(MainActivity.this, data_berita);
-                        recyclerView.setAdapter(adapter);
-
-                    } else {
-                        Toast.makeText(MainActivity.this, "Tidak ada berita untuk saat ini", Toast.LENGTH_SHORT).show();
-                    }
+                    progressBar.setVisibility(View.GONE);
+                    berita = response.body();
+                    adapter = new AdapterBerita(berita, MainActivity.this);
+                    recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                     swipeRefreshLayout.setRefreshing(false);
-                }
+
             }
 
 
             @Override
-            public void onFailure(retrofit2.Call<ResponseBerita> call, Throwable t) {
+            public void onFailure(retrofit2.Call<List<BeritaItem>> call, Throwable t) {
                 t.printStackTrace();
+                progressBar.setVisibility(View.GONE);
                 swipeRefreshLayout.setRefreshing(false);
 
             }
@@ -188,7 +195,29 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(getComponentName())
+        );
+
+        searchView.setIconifiedByDefault(false);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                tampilBerita(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                tampilBerita(newText);
+                return false;
+            }
+        });
         return true;
     }
 
@@ -198,12 +227,6 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 

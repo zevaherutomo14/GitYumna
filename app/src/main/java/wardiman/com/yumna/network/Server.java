@@ -7,6 +7,8 @@ public class Server {
     public static final String URL = "http://wardiman.com/adminyumna/login/";
     public static String API_URL = "http://wardiman.com/adminyumna/";
 
+    public static Retrofit retrofit;
+
     public static Retrofit setInit() {
         return new Retrofit.Builder().baseUrl(API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -15,6 +17,16 @@ public class Server {
 
     public static ApiServices getInstance() {
         return setInit().create(ApiServices.class);
+    }
+
+    public static Retrofit getApiClient(){
+        if (retrofit==null){
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(API_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+        return retrofit;
     }
 
 }

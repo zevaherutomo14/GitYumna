@@ -22,7 +22,7 @@ class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.MyViewHolder> {
     Context context;
     List<BeritaItem> berita;
     
-    public AdapterBerita(Context context, List<BeritaItem> data_berita){
+    public AdapterBerita(List<BeritaItem> data_berita, Context context){
         this.context = context;
         this.berita = data_berita;
     }
@@ -30,7 +30,7 @@ class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.berita_item, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.berita_item, viewGroup, false);
         
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
