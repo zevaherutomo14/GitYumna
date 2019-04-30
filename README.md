@@ -32,7 +32,10 @@ Fitur yang telah ada ialah:
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/ERD%20YUMNA.png"></h1>
 
 ## Class Diagram
-<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Class%20Diagram(1).png"></h1
+<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Class%20Diagram(1).png"></h1>
+  
+## Mockup
+<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/mocup%20yumna.PNG"></h1>
   
 ## Referensi
 -   https://medium.com/@rizal_hilman/aplikasi-portal-berita-android-dengan-php-mysqli-belajarapi-ccde39565403
