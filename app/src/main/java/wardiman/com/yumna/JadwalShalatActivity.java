@@ -221,27 +221,27 @@ public class JadwalShalatActivity extends AppCompatActivity implements EasyPermi
 
                                                         Date dateasli = simpletimeformat.parse(Time);
 
-                                                        if(dateisya.after(dateasli)){
+                                                        if(dateasli.after(dateisya) && dateasli.before(datesubuh)){
                                                             card_view_isya.setCardBackgroundColor(getResources().getColor(R.color.shalatTime));
                                                             tv_isha_value.setTextColor(getResources().getColor(R.color.white));
                                                             info_text_isya.setTextColor(getResources().getColor(R.color.white));
                                                         }
-                                                        else if(datemagrib.after(dateasli)){
+                                                        else if(dateasli.after(datemagrib) && dateasli.before(dateisya)){
                                                             card_view_maghrib.setCardBackgroundColor(getResources().getColor(R.color.shalatTime));
                                                             tv_maghrib_value.setTextColor(getResources().getColor(R.color.white));
                                                             info_text_maghrib.setTextColor(getResources().getColor(R.color.white));
                                                         }
-                                                        else if(dateashar.after(dateasli)){
+                                                        else if(dateasli.after(dateashar) && dateasli.before(datemagrib)){
                                                             card_view_ashar.setCardBackgroundColor(getResources().getColor(R.color.shalatTime));
                                                             tv_asr_value.setTextColor(getResources().getColor(R.color.white));
                                                             info_text_ashar.setTextColor(getResources().getColor(R.color.white));
                                                         }
-                                                        else if(datezuhur.after(dateasli)){
+                                                        else if(dateasli.after(datezuhur) && dateasli.before(dateashar)){
                                                             card_view_dzuhur.setCardBackgroundColor(getResources().getColor(R.color.shalatTime));
                                                             tv_dhuhr_value.setTextColor(getResources().getColor(R.color.white));
                                                             info_text_dzuhur.setTextColor(getResources().getColor(R.color.white));
                                                         }
-                                                        else if(datesubuh.after(dateasli)){
+                                                        else if(dateashar.after(datesubuh) && dateasli.before(datezuhur)){
                                                             card_view_subuh.setCardBackgroundColor(getResources().getColor(R.color.shalatTime));
                                                             tv_fajr_value.setTextColor(getResources().getColor(R.color.white));
                                                             info_text_subuh.setTextColor(getResources().getColor(R.color.white));
