@@ -252,6 +252,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
+            intent = new Intent(MainActivity.this, Konsultasi.class);
+            startActivity(intent);
 
         }  else if (id == R.id.nav_send) {
            signOut();
