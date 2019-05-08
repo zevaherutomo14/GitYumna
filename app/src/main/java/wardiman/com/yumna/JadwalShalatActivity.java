@@ -221,7 +221,12 @@ public class JadwalShalatActivity extends AppCompatActivity implements EasyPermi
 
                                                         Date dateasli = simpletimeformat.parse(Time);
 
-                                                        if(dateasli.after(dateisya) && dateasli.before(datesubuh)){
+                                                        if(dateasli.before(datesubuh)){
+                                                            card_view_isya.setCardBackgroundColor(getResources().getColor(R.color.shalatTime));
+                                                            tv_isha_value.setTextColor(getResources().getColor(R.color.white));
+                                                            info_text_isya.setTextColor(getResources().getColor(R.color.white));
+                                                        }
+                                                        else if(dateasli.after(dateisya) && dateasli.before(datesubuh)){
                                                             card_view_isya.setCardBackgroundColor(getResources().getColor(R.color.shalatTime));
                                                             tv_isha_value.setTextColor(getResources().getColor(R.color.white));
                                                             info_text_isya.setTextColor(getResources().getColor(R.color.white));
