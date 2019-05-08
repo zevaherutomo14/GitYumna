@@ -17,7 +17,7 @@ import wardiman.com.yumna.R;
 
 public class PilihanGandaActivity extends AppCompatActivity {
 
-    TextView mtvSkor, mtvSoal;
+    TextView mtvSkor, mtvSoal, mtvPage;
     RadioGroup mrbPilihan;
     RadioButton mrbJawaban1, mrbJawaban2, mrbJawaban3;
 
@@ -35,6 +35,7 @@ public class PilihanGandaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pilihan_ganda);
 
+        mtvPage = findViewById(R.id.page_quiz);
         mtvSkor =  findViewById(R.id.tvSkor);
         mtvSoal =  findViewById(R.id.tvSoal);
         mrbPilihan =  findViewById(R.id.rbPilihan);
