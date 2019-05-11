@@ -146,6 +146,23 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
+///////////////////////////////////////////////////////////jadwal shalatt//////////////////////
+
+
+    public void jadwalShalat(View view) {
+        intent = new Intent(MainActivity.this, JadwalShalatActivity.class);
+        startActivity(intent);
+    }
+
+    public void jadwalKajian(View view) {
+        intent = new Intent(MainActivity.this, ArtikelActivity.class);
+        startActivity(intent);
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
     @Override
     public void onRefresh() {
         tampilBerita("");
