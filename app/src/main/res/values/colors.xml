@@ -8,4 +8,7 @@
     <color name="button">#448AFF</color>
     <color name="shalatTime">#FCAF17</color>
     <color name="goals_string">#424858</color>
+    <color name="orange">#FDAF17</color>
+    <color name="cardKonsul">#D4F6E5</color>
+    <color name="textKonsul">#666465</color>
 </resources>

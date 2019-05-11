@@ -28,4 +28,10 @@ public class Konsultasi extends AppCompatActivity {
             bukabrowser.setData(Uri. parse(url));
             startActivity(bukabrowser);
         }
+    public void buka2(View view) {
+        String url = "https://api.whatsapp.com/send?phone=6282312188225" ;
+        Intent bukabrowser = new Intent(Intent. ACTION_VIEW);
+        bukabrowser.setData(Uri. parse(url));
+        startActivity(bukabrowser);
+    }
 }
