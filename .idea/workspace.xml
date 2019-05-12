@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7f02c37-db6a-4bd6-9f2b-3badfeb09749" name="Default Changelist" comment="konsultasi">
+    <list default="true" id="a7f02c37-db6a-4bd6-9f2b-3badfeb09749" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -16,9 +16,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/wardiman/com/yumna/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/wardiman/com/yumna/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/berita_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/berita_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/artikel_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/artikel_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_artikel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_artikel.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
     <session id="-1171933234">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="32" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -84,7 +83,7 @@
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.3" value="5" />
+          <entry key="project.open.time.3" value="6" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.35" value="1" />
@@ -97,23 +96,23 @@
           <entry key="project.open.time.68" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="6" />
-          <entry key="java" value="36" />
+          <entry key="java" value="37" />
           <entry key="properties" value="7" />
-          <entry key="xml" value="77" />
+          <entry key="xml" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="6" />
-          <entry key="JAVA" value="36" />
+          <entry key="JAVA" value="37" />
           <entry key="Properties" value="7" />
-          <entry key="XML" value="77" />
+          <entry key="XML" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -121,17 +120,17 @@
           <entry key="gradle" value="2" />
           <entry key="java" value="849" />
           <entry key="properties" value="3" />
-          <entry key="txt" value="173" />
-          <entry key="xml" value="1443" />
+          <entry key="txt" value="188" />
+          <entry key="xml" value="1603" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="2" />
           <entry key="JAVA" value="849" />
-          <entry key="PLAIN_TEXT" value="173" />
+          <entry key="PLAIN_TEXT" value="188" />
           <entry key="Properties" value="3" />
-          <entry key="XML" value="1443" />
+          <entry key="XML" value="1603" />
         </counts>
       </usages-collector>
     </session>
@@ -141,25 +140,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/berita_item.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
-              <folding>
-                <element signature="e#397#417#0" expanded="true" />
-                <element signature="e#1552#1572#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="40" selection-end-line="59" selection-end-column="37" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1202">
-              <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+            <state relative-caret-position="180">
+              <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/artikel_item.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
               <folding>
-                <element signature="e#326#366#0" expanded="true" />
-                <element signature="e#5372#5392#0" expanded="true" />
+                <element signature="e#397#417#0" expanded="true" />
+                <element signature="e#778#798#0" expanded="true" />
+                <element signature="e#1392#1412#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,12 +173,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/wardiman/com/yumna/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_artikel.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_artikel.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="164" selection-start-line="164" selection-end-line="164" />
+            <state relative-caret-position="595">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+              <folding>
+                <element signature="e#1490#1510#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -2290,6 +2306,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/berita_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/wardiman/com/yumna/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/artikel_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_artikel.xml" />
       </list>
     </option>
   </component>
@@ -2306,22 +2324,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GitYumna" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GitYumna" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="GitYumna" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GitYumna" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2349,12 +2353,6 @@
               <item name="GitYumna" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="GitYumna" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
@@ -2365,8 +2363,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GitYumna" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitYumna" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="GitYumna" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitYumna" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2375,6 +2387,7 @@
     <property name="device.picker.selection" value="177d9a1b7d64" />
     <property name="format" value="PNG" />
     <property name="lastFolderRoot" value="$PROJECT_DIR$/../../PSBO-YUMNA2/Assets/drawable-xhdpi/Repeat Grid 1.png" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PSBO-YUMNA2/GitYumna-master" />
     <property name="method" value="Automatic" />
     <property name="resolutions" value="HDPI&#10;XXHDPI&#10;MDPI&#10;XXXHDPI&#10;XHDPI" />
@@ -2384,8 +2397,12 @@
     <property name="sync.plugin.last.upgrade.timestamp" value="1555342002296" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projct\Yumna\GitYumna\app\src\main\res\layout" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\drawable-xxhdpi" />
+      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\drawable-v24" />
+      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\drawable-xxxhdpi" />
+      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\drawable-hdpi" />
+      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app" />
     </key>
     <key name="android.template.packageName">
       <recent name="wardiman.com.yumna" />
@@ -2394,12 +2411,8 @@
       <recent name="wardiman.com.yumna.network" />
       <recent name="wardiman.com.yumna.Goals" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\drawable-xxxhdpi" />
-      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\drawable-hdpi" />
-      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\drawable-v24" />
-      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app" />
-      <recent name="F:\PROJECT\PSBO-YUMNA\GitYumna\app\src\main\res\layout" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projct\Yumna\GitYumna\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2596,7 +2609,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557552353977</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="konsultasi">
+      <created>1557563870743</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557563870743</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Beranda Artikel">
+      <created>1557563967723</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557563967723</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2604,7 +2631,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17246597" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20272315" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -2625,7 +2652,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.30711043" />
+      <window_info anchor="right" id="Preview" order="4" visible="true" weight="0.30711043" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Assistant" order="6" weight="0.32980332" />
     </layout>
@@ -2643,26 +2670,10 @@
     <MESSAGE value="goals" />
     <MESSAGE value="goals2" />
     <MESSAGE value="konsultasi" />
-    <option name="LAST_COMMIT_MESSAGE" value="konsultasi" />
+    <MESSAGE value="Beranda Artikel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beranda Artikel" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/wardiman/com/yumna/model/Item.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/wardiman/com/yumna/model/TodayWeather.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -2960,18 +2971,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/berita_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
-          <folding>
-            <element signature="e#397#417#0" expanded="true" />
-            <element signature="e#1552#1572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custom_border.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -2982,13 +2981,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/berita_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-end-line="59" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_artikel.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/artikel_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+          <folding>
+            <element signature="e#397#417#0" expanded="true" />
+            <element signature="e#778#798#0" expanded="true" />
+            <element signature="e#1392#1412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1202">
-          <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_artikel.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
           <folding>
-            <element signature="e#326#366#0" expanded="true" />
-            <element signature="e#5372#5392#0" expanded="true" />
+            <element signature="e#1490#1510#0" expanded="true" />
           </folding>
         </state>
       </provider>
