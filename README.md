@@ -1,4 +1,4 @@
-# GitYumna
+# HijrahID
 # Latar Belakang
 
 Setiap manusia dalam menjalankan agamanya diperlukan komitmen yang kuat agar tujuan utama dari menjalankan agama dapat terpenuhi. Setiap individu yang beragama, secara pasti akan memiliki aspek religi pada diri masing-masing, tidak terkecuali pada mualaf. Tanpa adanya komitmen, akan sulit bagi mualaf untuk dapat menjalankan kehidupan beragamanya dengan baik. Karenanya untuk memenuhi tujuan dari agama Islam, mualaf harus belajar banyak hal untuk menguasai dan memahami ajaran Islam. Pada sisi yang lain, para mualaf juga harus bersiap diri terhadap rintangan, hambatan, dan gangguan yang seringkali muncul seiring dengan proses menjadi seorang mualaf.
