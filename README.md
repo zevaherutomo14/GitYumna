@@ -1,5 +1,5 @@
 # GitYumna
-#Latar Belakang
+# Latar Belakang
 ## Use Case Diagram
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Yumna_USE_CASE_DIAGRAM.png"></h1>
 
@@ -16,19 +16,19 @@
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/mocup%20yumna.PNG"></h1>
   
 
-###Tools yang digunakan untuk membangun aplikasi ini ialah :
+### Tools yang digunakan untuk membangun aplikasi ini ialah :
 -   Android studio
 -   Xampp
 -   Text Editor (Atom)
 
-###Bahasa pemrograman yang digunakan :
+### Bahasa pemrograman yang digunakan :
 -   Java
 -   XML
 -   PHp
 -   SQL
 -   HTML
 
-###Fitur yang telah ada ialah:
+### Fitur yang telah ada ialah:
 -   Login 
 -   register
 -   Fitur Artikel
