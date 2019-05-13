@@ -1,10 +1,10 @@
 # GitYumna
 # Latar Belakang
- Setiap manusia dalam menjalankan agamanya diperlukan komitmen yang kuat agar tujuan utama dari menjalankan agama dapat terpenuhi. Setiap individu yang beragama, secara pasti akan memiliki aspek religi pada diri masing-masing, tidak terkecuali pada mualaf. Tanpa adanya komitmen, akan sulit bagi mualaf untuk dapat menjalankan kehidupan beragamanya dengan baik. Karenanya untuk memenuhi tujuan dari agama Islam, mualaf harus belajar banyak hal untuk menguasai dan memahami ajaran Islam. Pada sisi yang lain, para mualaf juga harus bersiap diri terhadap rintangan, hambatan, dan gangguan yang seringkali muncul seiring dengan proses menjadi seorang mualaf.
+  Setiap manusia dalam menjalankan agamanya diperlukan komitmen yang kuat agar tujuan utama dari menjalankan agama dapat terpenuhi. Setiap individu yang beragama, secara pasti akan memiliki aspek religi pada diri masing-masing, tidak terkecuali pada mualaf. Tanpa adanya komitmen, akan sulit bagi mualaf untuk dapat menjalankan kehidupan beragamanya dengan baik. Karenanya untuk memenuhi tujuan dari agama Islam, mualaf harus belajar banyak hal untuk menguasai dan memahami ajaran Islam. Pada sisi yang lain, para mualaf juga harus bersiap diri terhadap rintangan, hambatan, dan gangguan yang seringkali muncul seiring dengan proses menjadi seorang mualaf.
  
- Mengadakan pembinaan mualaf yang optimal merupakan suatu hal yang tidak mudah. Diperlukan strategi dan metode yang baik melalui komunikasi yang efektif, karena terbatasnya waktu dan sumber daya. Selain itu, pembinaan yang kurang optimal juga disebabkan karena minimnya inovasi atau pembaruan teknik dalam berdakwah dikalangan pembina.
+   Mengadakan pembinaan mualaf yang optimal merupakan suatu hal yang tidak mudah. Diperlukan strategi dan metode yang baik melalui komunikasi yang efektif, karena terbatasnya waktu dan sumber daya. Selain itu, pembinaan yang kurang optimal juga disebabkan karena minimnya inovasi atau pembaruan teknik dalam berdakwah dikalangan pembina.
  
- Salah satu solusi dari masalah ini adalah dengan inovasi dalam metode pembinaan mualaf, yaitu dengan membuat media bimbingan dan pembelajaran sekaligus konsultasi berbasis aplikasi untuk para mualaf di indonesia. Konsep ini bertujuan untuk membantu mualaf mendapat bimbingan dan  belajar mengenai agama Islam serta melakukan konsultasi kepada pembina melalui aplikasi  ini.
+   Salah satu solusi dari masalah ini adalah dengan inovasi dalam metode pembinaan mualaf, yaitu dengan membuat media bimbingan dan pembelajaran sekaligus konsultasi berbasis aplikasi untuk para mualaf di indonesia. Konsep ini bertujuan untuk membantu mualaf mendapat bimbingan dan  belajar mengenai agama Islam serta melakukan konsultasi kepada pembina melalui aplikasi  ini.
 
 # Tujuan Pembuatan Aplikasi
 1. Merancang dan membuat aplikasi guna sarana belajar dan  konsultasi agar mempermudah para muallaf di Indonesia dalam memahami agama Islam.
@@ -12,9 +12,9 @@
 
 #  lingkungan pengembangan
 Aplikasi Yumnamemiliki batasan sebagai berikut:
-• Aplikasi ini ditujukan hanya pada mualaf.
-• Para  ustadz/ah  tidak  melakukan  registrasi,  tapi  langsung  dipilih/diundang oleh administrator.
-• Memiliki perangkat yang mendukungaplikasi Yumna
+* Aplikasi ini ditujukan hanya pada mualaf.
+* Para  ustadz/ah  tidak  melakukan  registrasi,  tapi  langsung  dipilih/diundang oleh administrator.
+* Memiliki perangkat yang mendukungaplikasi Yumna
 
 # Dokumentasi
 ### Use Case Diagram
