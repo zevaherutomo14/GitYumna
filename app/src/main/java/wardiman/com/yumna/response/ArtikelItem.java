@@ -4,6 +4,8 @@ public class ArtikelItem {
     //encapsulasi
     public String id;
 
+    public String judul;
+
     public String tempat;
 
     public String waktu;
@@ -52,6 +54,14 @@ public class ArtikelItem {
 
     public void setTempat(String tempat) {
         this.tempat = tempat;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public void setJudul(String judul) {
+        this.judul = judul;
     }
 
     public void setId(String id) {

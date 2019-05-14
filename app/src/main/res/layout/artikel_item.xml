@@ -38,7 +38,7 @@
             android:layout_marginLeft="5dp">
 
             <TextView
-                android:id="@+id/tvTempat"
+                android:id="@+id/tvJudulArt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"

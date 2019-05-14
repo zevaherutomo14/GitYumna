@@ -21,6 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Profil"></activity>
         <activity
             android:name=".Quiz.SkorWdActivity"
             tools:ignore="InnerclassSeparator" />

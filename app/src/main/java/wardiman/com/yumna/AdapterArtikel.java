@@ -41,8 +41,10 @@ public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+        holder.tvJudulart.setText(artikel.get(position).getJudul());
         holder.tvTempat.setText(artikel.get(position).getTempat());
         holder.tvTanggal.setText(artikel.get(position).getTanggal());
+        holder.tvWaktu.setText(artikel.get(position).getWaktu());
         //holder.tvPenulis.setText(berita.get(position).getPenulis());
 
         final String urlGamberArtikel = "http://wardiman.com/adminyumna/poster/" + artikel.get(position).getPoster();
@@ -54,6 +56,7 @@ public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.MyViewHo
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailArtActivity.class);
 
+                intent.putExtra("JDL_ARTIKEL", artikel.get(position).getJudul());
                 intent.putExtra("TMP_ARTIKEL", artikel.get(position).getTempat());
                 intent.putExtra("WKT_ARTIKEL", artikel.get(position).getWaktu());
                 intent.putExtra("TGL_ARTIKEL", artikel.get(position).getTanggal());
@@ -72,11 +75,12 @@ public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         ImageView ivGamberArtikel;
-        TextView tvTempat , tvWaktu, tvTanggal, tvCatatan;
+        TextView tvTempat , tvWaktu, tvTanggal, tvCatatan, tvJudulart;
 
         public MyViewHolder(View view){
             super(view);
 
+            tvJudulart = view.findViewById(R.id.tvJudulArt);
             ivGamberArtikel = view.findViewById(R.id.ivPosterArtikel);
             tvTempat = view.findViewById(R.id.tvTempatArtikel);
             tvWaktu = view.findViewById(R.id.tvWaktu);
