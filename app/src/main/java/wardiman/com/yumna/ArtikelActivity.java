@@ -1,6 +1,9 @@
 package wardiman.com.yumna;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -49,6 +53,37 @@ public class ArtikelActivity extends AppCompatActivity implements SwipeRefreshLa
         recyclerView = findViewById(R.id.rvListArtikel);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         tampilArtikel();
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        Menu menu = navigation.getMenu();
+        MenuItem menuItem = menu.getItem(3);
+        menuItem.setChecked(true);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent goals = new Intent(ArtikelActivity.this,MainActivity.class);
+                        startActivity(goals);
+                        return true;
+                    case R.id.navigation_goals:
+                        Intent kajian = new Intent(ArtikelActivity.this,GoalsActivity.class);
+                        startActivity(kajian);
+                        return true;
+                    case R.id.navigation_konsul:
+                        Intent konsul = new Intent(ArtikelActivity.this,Konsultasi.class);
+                        startActivity(konsul);
+                        return true;
+                    case R.id.navigation_kajian:
+                        return true;
+                    case R.id.navigation_profil:
+                        Intent profil = new Intent(ArtikelActivity.this,Profil.class);
+                        startActivity(profil);
+                        return true;
+                }
+                return false;
+            }
+        });
 
         swipeRefreshLayout.post(new Runnable() {
             @Override

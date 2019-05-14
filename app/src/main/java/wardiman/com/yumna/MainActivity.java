@@ -136,8 +136,8 @@ public class MainActivity extends AppCompatActivity
                         startActivity(kajian);
                         return true;
                     case R.id.navigation_profil:
-//                        Intent profil = new Intent(MainActivity.this,Profil.class);
-//                        startActivity(profil);
+                        Intent profil = new Intent(MainActivity.this,Profil.class);
+                        startActivity(profil);
                         return true;
                 }
                 return false;
