@@ -10,15 +10,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import org.w3c.dom.Text;
 
 public class Profil extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authListener;
 
     private Button btn_logout;
+    private TextView tvEmail, tvUid;
 
 
     @Override
@@ -35,6 +39,21 @@ public class Profil extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        tvEmail = findViewById(R.id.tvEmail);
+        tvUid = findViewById(R.id.tvUid);
+
+
+        if (user != null){
+            String name = user.getDisplayName();
+            String mail = user.getEmail();
+            boolean emailVerified = user.isEmailVerified();
+
+            String uid = user.getUid();
+
+            tvEmail.setText(mail);
+            tvUid.setText(uid);
+        }
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         Menu menu = navigation.getMenu();
