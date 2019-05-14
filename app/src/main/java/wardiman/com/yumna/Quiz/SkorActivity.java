@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import wardiman.com.yumna.Goals.MualafActivity;
-import wardiman.com.yumna.Goals.activity_kuismualaf;
 import wardiman.com.yumna.R;
 
 public class SkorActivity extends AppCompatActivity {

@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import wardiman.com.yumna.Quiz.PilGanWd;
 import wardiman.com.yumna.R;
 
 public class WudhuActivity extends AppCompatActivity {
@@ -30,7 +31,7 @@ public class WudhuActivity extends AppCompatActivity {
         btn_kuiswudhu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(WudhuActivity.this, activity_kuiswudhu.class));
+                startActivity(new Intent(WudhuActivity.this, PilGanWd.class));
             }
         });
     }

@@ -21,13 +21,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Quiz.SkorWdActivity"></activity>
-        <activity android:name=".Quiz.SkorSyhActivity" />
-        <activity android:name=".Quiz.SkorShlActivity" />
-        <activity android:name=".Quiz.SkorScActivity" />
-        <activity android:name=".Quiz.PilGanWd" />
-        <activity android:name=".Quiz.PilGanShl" />
-        <activity android:name=".Quiz.PilGanSc" />
+        <activity
+            android:name=".Quiz.SkorWdActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.SkorSyhActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.SkorShlActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.SkorScActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.PilGanWd"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.PilGanShl"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Quiz.PilGanSc"
+            tools:ignore="InnerclassSeparator" />
         <activity android:name=".Konsultasi" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".JadwalShalatActivity" />
@@ -91,22 +105,11 @@
             android:name=".Goals.WudhuActivity"
             tools:ignore="InnerclassSeparator" />
         <activity
-            android:name=".Goals.activity_kuismualaf"
+            android:name=".Quiz.PilGanSy"
             tools:ignore="InnerclassSeparator" />
         <activity
-            android:name=".Goals.activity_kuissyahadat"
+            android:name=".Quiz.EssaySY"
             tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".Goals.activity_kuisshalat"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".Goals.activity_kuiswudhu"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".Goals.activity_kuisbersuci"
-            tools:ignore="InnerclassSeparator" />
-        <activity android:name=".Quiz.PilGanSy" />
-        <activity android:name=".Quiz.EssaySY" />
     </application>
 
 </manifest>

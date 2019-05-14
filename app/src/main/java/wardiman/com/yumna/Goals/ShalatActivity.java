@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import wardiman.com.yumna.Quiz.PilGanShl;
 import wardiman.com.yumna.R;
 
 public class ShalatActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class ShalatActivity extends AppCompatActivity {
         btn_kuisshalat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ShalatActivity.this, activity_kuisshalat.class));
+                startActivity(new Intent(ShalatActivity.this, PilGanShl.class));
             }
         });
     }

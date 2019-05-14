@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import wardiman.com.yumna.Quiz.PilGanSc;
 import wardiman.com.yumna.R;
 
 public class BersuciActivity extends AppCompatActivity {
@@ -30,7 +31,7 @@ public class BersuciActivity extends AppCompatActivity {
         btn_kuisbersuci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(BersuciActivity.this, activity_kuisbersuci.class));
+                startActivity(new Intent(BersuciActivity.this, PilGanSc.class));
             }
         });
     }

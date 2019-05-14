@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 
+import wardiman.com.yumna.Quiz.PilihanGandaActivity;
 import wardiman.com.yumna.R;
 
 public class MualafActivity extends AppCompatActivity {
@@ -39,7 +40,7 @@ public class MualafActivity extends AppCompatActivity {
         btn_kuismualaf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MualafActivity.this, activity_kuismualaf.class));
+                startActivity(new Intent(MualafActivity.this, PilihanGandaActivity.class));
             }
         });
 
