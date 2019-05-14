@@ -21,7 +21,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Konsultasi"></activity>
+        <activity android:name=".Quiz.SkorWdActivity"></activity>
+        <activity android:name=".Quiz.SkorSyhActivity" />
+        <activity android:name=".Quiz.SkorShlActivity" />
+        <activity android:name=".Quiz.SkorScActivity" />
+        <activity android:name=".Quiz.PilGanWd" />
+        <activity android:name=".Quiz.PilGanShl" />
+        <activity android:name=".Quiz.PilGanSc" />
+        <activity android:name=".Konsultasi" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".JadwalShalatActivity" />
         <activity
