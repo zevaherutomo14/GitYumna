@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 public class DetailArtActivity extends AppCompatActivity {
 
     ImageView ivGambarArtikel;
-    TextView tvTglAcara, tvWaktu, tvTempat;
+    TextView tvTglAcara, tvWaktu, tvTempat, tvJudulart;
     WebView wvKontenArtikel;
 
     @Override
@@ -36,6 +36,7 @@ public class DetailArtActivity extends AppCompatActivity {
 //        });
 
         ivGambarArtikel = (ImageView) findViewById(R.id.ivGambarArtikel);
+        tvJudulart = (TextView) findViewById(R.id.tvJudulArt);
         tvTglAcara = (TextView) findViewById(R.id.tvTglAcara);
         tvWaktu = (TextView) findViewById(R.id.tvWaktu);
         tvTempat = (TextView) findViewById(R.id.tvTempat);
@@ -47,6 +48,7 @@ public class DetailArtActivity extends AppCompatActivity {
 
     @SuppressLint({"SetJavaScriptEnabled", "SetTextI18n"})
     private void showDetailBerita() {
+        String judul = getIntent().getStringExtra("JDL_ARTIKEL");
         String tempat = getIntent().getStringExtra("TMP_ARTIKEL");
         String waktu = getIntent().getStringExtra("WKT_ARTIKEL");
         String tanggal = getIntent().getStringExtra("TGL_ARTIKEL");
@@ -55,6 +57,7 @@ public class DetailArtActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Info Kajian");
 
+        tvJudulart.setText(judul);
         tvTempat.setText(tempat);
         tvTglAcara.setText(tanggal);
         tvWaktu.setText(waktu);
