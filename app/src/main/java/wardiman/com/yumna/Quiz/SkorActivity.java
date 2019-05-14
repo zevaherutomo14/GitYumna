@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import wardiman.com.yumna.Goals.MualafActivity;
 import wardiman.com.yumna.Goals.activity_kuismualaf;
 import wardiman.com.yumna.R;
 
@@ -33,7 +34,7 @@ public class SkorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.btnMenu :
-                        Intent intent = new Intent(SkorActivity.this, activity_kuismualaf.class);
+                        Intent intent = new Intent(SkorActivity.this, MualafActivity.class);
                         startActivity(intent);
                         break;
 

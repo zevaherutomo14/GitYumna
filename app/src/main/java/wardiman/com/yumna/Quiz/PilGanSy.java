@@ -64,7 +64,7 @@ public class PilGanSy extends AppCompatActivity {
         arr = soalPG.syahadat.length;
         if (x >= arr){
             String jumlahSkor = String.valueOf(skor);
-            Intent intent = new Intent(PilGanSy.this,SkorActivity.class);
+            Intent intent = new Intent(PilGanSy.this,SkorSyhActivity.class);
             intent.putExtra("skorAkhir", jumlahSkor);
             intent.putExtra("activity", "PilihanGanda");
             startActivity(intent);
