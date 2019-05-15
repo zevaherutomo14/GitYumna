@@ -38,7 +38,7 @@ Salah satu solusi dari masalah ini adalah dengan inovasi dalam metode pembinaan 
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Yumna_USE_CASE_DIAGRAM.png"></h1>
 
 ### Activity Diagram
-<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Act%20diagram%20Yumna.png"></h1>
+<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Act%20diagram%20Yumna%20fix.png"></h1>
 
 ### entity relationship diagram
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/New%20ER%20Diagram%20Hijrah%20id.png"></h1>
