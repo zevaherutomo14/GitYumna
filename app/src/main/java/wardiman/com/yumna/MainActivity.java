@@ -298,9 +298,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             intent = new Intent(MainActivity.this, GoalsActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_compas){
-            intent = new Intent(MainActivity.this, CompassActivity.class);
-           startActivity(intent);
         } else if (id == R.id.nav_manage) {
             intent = new Intent(MainActivity.this, Konsultasi.class);
             startActivity(intent);

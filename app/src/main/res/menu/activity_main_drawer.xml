@@ -25,14 +25,6 @@
             android:icon="@drawable/setting"
             android:title="Jadwal Shalat" />
         <item
-            android:id="@+id/nav_compas"
-            android:icon="@drawable/setting"
-            android:title="Compass" />
-        <item
-            android:id="@+id/nav_pengaturan"
-            android:icon="@drawable/setting"
-            android:title="Pengaturan" />
-        <item
             android:id="@+id/nav_tentang"
             android:icon="@drawable/tetang"
             android:title="Tentang" />
