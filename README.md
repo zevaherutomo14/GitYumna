@@ -27,9 +27,9 @@ Salah satu solusi dari masalah ini adalah dengan inovasi dalam metode pembinaan 
 *   HTML5
 
 #### Device yang digunakan :
-* Laptop Windows10
 * macbook pro 13 inch touch bar
-* SmartPhone android kitkat, nougat, Oreo
+* Laptop Windows10
+* SmartPhone android kitkat, nougat dan Oreo
 
 # Dokumentasi
 ### Use Case Diagram
