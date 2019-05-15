@@ -25,36 +25,36 @@ public class Konsultasi extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        Menu menu = navigation.getMenu();
-        MenuItem menuItem = menu.getItem(2);
-        menuItem.setChecked(true);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        Intent goals = new Intent(Konsultasi.this,MainActivity.class);
-                        startActivity(goals);
-                        return true;
-                    case R.id.navigation_goals:
-                        Intent konsul = new Intent(Konsultasi.this,GoalsActivity.class);
-                        startActivity(konsul);
-                        return true;
-                    case R.id.navigation_konsul:
-                        return true;
-                    case R.id.navigation_kajian:
-                        Intent kajian = new Intent(Konsultasi.this,ArtikelActivity.class);
-                        startActivity(kajian);
-                        return true;
-                    case R.id.navigation_profil:
-                        Intent profil = new Intent(Konsultasi.this,Profil.class);
-                        startActivity(profil);
-                        return true;
-                }
-                return false;
-            }
-        });
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        Menu menu = navigation.getMenu();
+//        MenuItem menuItem = menu.getItem(2);
+//        menuItem.setChecked(true);
+//        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.navigation_home:
+//                        Intent goals = new Intent(Konsultasi.this,MainActivity.class);
+//                        startActivity(goals);
+//                        return true;
+//                    case R.id.navigation_goals:
+//                        Intent konsul = new Intent(Konsultasi.this,GoalsActivity.class);
+//                        startActivity(konsul);
+//                        return true;
+//                    case R.id.navigation_konsul:
+//                        return true;
+//                    case R.id.navigation_kajian:
+//                        Intent kajian = new Intent(Konsultasi.this,ArtikelActivity.class);
+//                        startActivity(kajian);
+//                        return true;
+//                    case R.id.navigation_profil:
+//                        Intent profil = new Intent(Konsultasi.this,Profil.class);
+//                        startActivity(profil);
+//                        return true;
+//                }
+//                return false;
+//            }
+//        });
 
     }
 
