@@ -14,10 +14,22 @@ Salah satu solusi dari masalah ini adalah dengan inovasi dalam metode pembinaan 
 
 #  lingkungan pengembangan
 
-Aplikasi Yumnamemiliki batasan sebagai berikut:
-* Aplikasi ini ditujukan hanya pada mualaf.
-* Para  ustadz/ah  tidak  melakukan  registrasi,  tapi  langsung  dipilih/diundang oleh administrator.
-* Memiliki perangkat yang mendukungaplikasi Yumna
+#### Tools yang digunakan:
+*   Android studio
+*   Xampp
+*   Text Editor (Atom)
+
+#### Bahasa pemrograman yang digunakan :
+*   Java
+*   XML
+*   PHp5
+*   SQL
+*   HTML5
+
+#### Device yang digunakan :
+* Laptop Windows10
+* macbook pro 13 inch touch bar
+* SmartPhone android kitkat, nougat, Oreo
 
 # Dokumentasi
 ### Use Case Diagram
@@ -34,19 +46,6 @@ Aplikasi Yumnamemiliki batasan sebagai berikut:
   
 ### Mockup
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/mocup%20yumna.PNG"></h1>
-  
-
-### Tools yang digunakan untuk membangun aplikasi ini ialah :
--   Android studio
--   Xampp
--   Text Editor (Atom)
-
-### Bahasa pemrograman yang digunakan :
--   Java
--   XML
--   PHp
--   SQL
--   HTML
 
 ### Fitur yang telah ada ialah:
 -   Login 
