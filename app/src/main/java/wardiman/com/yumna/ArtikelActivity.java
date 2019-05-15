@@ -54,36 +54,36 @@ public class ArtikelActivity extends AppCompatActivity implements SwipeRefreshLa
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         tampilArtikel();
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        Menu menu = navigation.getMenu();
-        MenuItem menuItem = menu.getItem(3);
-        menuItem.setChecked(true);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        Intent goals = new Intent(ArtikelActivity.this,MainActivity.class);
-                        startActivity(goals);
-                        return true;
-                    case R.id.navigation_goals:
-                        Intent kajian = new Intent(ArtikelActivity.this,GoalsActivity.class);
-                        startActivity(kajian);
-                        return true;
-                    case R.id.navigation_konsul:
-                        Intent konsul = new Intent(ArtikelActivity.this,Konsultasi.class);
-                        startActivity(konsul);
-                        return true;
-                    case R.id.navigation_kajian:
-                        return true;
-                    case R.id.navigation_profil:
-                        Intent profil = new Intent(ArtikelActivity.this,Profil.class);
-                        startActivity(profil);
-                        return true;
-                }
-                return false;
-            }
-        });
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        Menu menu = navigation.getMenu();
+//        MenuItem menuItem = menu.getItem(3);
+//        menuItem.setChecked(true);
+//        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.navigation_home:
+//                        Intent goals = new Intent(ArtikelActivity.this,MainActivity.class);
+//                        startActivity(goals);
+//                        return true;
+//                    case R.id.navigation_goals:
+//                        Intent kajian = new Intent(ArtikelActivity.this,GoalsActivity.class);
+//                        startActivity(kajian);
+//                        return true;
+//                    case R.id.navigation_konsul:
+//                        Intent konsul = new Intent(ArtikelActivity.this,Konsultasi.class);
+//                        startActivity(konsul);
+//                        return true;
+//                    case R.id.navigation_kajian:
+//                        return true;
+//                    case R.id.navigation_profil:
+//                        Intent profil = new Intent(ArtikelActivity.this,Profil.class);
+//                        startActivity(profil);
+//                        return true;
+//                }
+//                return false;
+//            }
+//        });
 
         swipeRefreshLayout.post(new Runnable() {
             @Override

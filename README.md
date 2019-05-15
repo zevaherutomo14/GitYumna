@@ -1,4 +1,6 @@
 # HijrahID
+<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/111585.jpg"></h1>
+
 # Latar Belakang
 
 Setiap manusia dalam menjalankan agamanya diperlukan komitmen yang kuat agar tujuan utama dari menjalankan agama dapat terpenuhi. Setiap individu yang beragama, secara pasti akan memiliki aspek religi pada diri masing-masing, tidak terkecuali pada mualaf. Tanpa adanya komitmen, akan sulit bagi mualaf untuk dapat menjalankan kehidupan beragamanya dengan baik. Karenanya untuk memenuhi tujuan dari agama Islam, mualaf harus belajar banyak hal untuk menguasai dan memahami ajaran Islam. Pada sisi yang lain, para mualaf juga harus bersiap diri terhadap rintangan, hambatan, dan gangguan yang seringkali muncul seiring dengan proses menjadi seorang mualaf.
@@ -14,10 +16,22 @@ Salah satu solusi dari masalah ini adalah dengan inovasi dalam metode pembinaan 
 
 #  lingkungan pengembangan
 
-Aplikasi Yumnamemiliki batasan sebagai berikut:
-* Aplikasi ini ditujukan hanya pada mualaf.
-* Para  ustadz/ah  tidak  melakukan  registrasi,  tapi  langsung  dipilih/diundang oleh administrator.
-* Memiliki perangkat yang mendukungaplikasi Yumna
+#### Tools yang digunakan:
+*   Android studio
+*   Xampp
+*   Text Editor (Atom)
+
+#### Bahasa pemrograman yang digunakan :
+*   Java
+*   XML
+*   PHp5
+*   SQL
+*   HTML5
+
+#### Device yang digunakan :
+* macbook pro 13 inch touch bar
+* Laptop Windows10
+* SmartPhone android kitkat, nougat dan Oreo
 
 # Dokumentasi
 ### Use Case Diagram
@@ -27,26 +41,13 @@ Aplikasi Yumnamemiliki batasan sebagai berikut:
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Act%20diagram%20Yumna.png"></h1>
 
 ### entity relationship diagram
-<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/ERD%20YUMNA.png"></h1>
+<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/New%20ER%20Diagram%20Hijrah%20id.png"></h1>
 
 ### Class Diagram
-<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/Class%20Diagram(1).png"></h1>
+<h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/New%20Class%20Diagram%20Hijrah%20id.png"></h1>
   
 ### Mockup
 <h1 align='center'><img src="https://github.com/Diman12345/GitYumna/blob/master/Dokumentasi%20YUMNA/mocup%20yumna.PNG"></h1>
-  
-
-### Tools yang digunakan untuk membangun aplikasi ini ialah :
--   Android studio
--   Xampp
--   Text Editor (Atom)
-
-### Bahasa pemrograman yang digunakan :
--   Java
--   XML
--   PHp
--   SQL
--   HTML
 
 ### Fitur yang telah ada ialah:
 -   Login 

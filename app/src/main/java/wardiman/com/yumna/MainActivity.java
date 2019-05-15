@@ -61,7 +61,7 @@ import wardiman.com.yumna.response.BeritaItem;
 import wardiman.com.yumna.response.ResponseBerita;
 
 public class MainActivity extends AppCompatActivity
-        implements SwipeRefreshLayout.OnRefreshListener {
+        implements NavigationView.OnNavigationItemSelectedListener, SwipeRefreshLayout.OnRefreshListener {
 
     TextView txt_id, txt_username;
     String mail;
@@ -112,48 +112,48 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         tampilBerita("");
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        Menu menu = navigation.getMenu();
-        MenuItem menuItem = menu.getItem(0);
-        menuItem.setChecked(true);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment = null;
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        return true;
-                    case R.id.navigation_goals:
-                        Intent goals = new Intent(MainActivity.this,GoalsActivity.class);
-                        startActivity(goals);
-                        return true;
-                    case R.id.navigation_konsul:
-                        Intent konsul = new Intent(MainActivity.this,Konsultasi.class);
-                        startActivity(konsul);
-                        return true;
-                    case R.id.navigation_kajian:
-                        Intent kajian = new Intent(MainActivity.this,ArtikelActivity.class);
-                        startActivity(kajian);
-                        return true;
-                    case R.id.navigation_profil:
-                        Intent profil = new Intent(MainActivity.this,Profil.class);
-                        startActivity(profil);
-                        return true;
-                }
-                return false;
-            }
-        });
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        Menu menu = navigation.getMenu();
+//        MenuItem menuItem = menu.getItem(0);
+//        menuItem.setChecked(true);
+//        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                Fragment fragment = null;
+//                switch (item.getItemId()) {
+//                    case R.id.navigation_home:
+//                        return true;
+//                    case R.id.navigation_goals:
+//                        Intent goals = new Intent(MainActivity.this,GoalsActivity.class);
+//                        startActivity(goals);
+//                        return true;
+//                    case R.id.navigation_konsul:
+//                        Intent konsul = new Intent(MainActivity.this,Konsultasi.class);
+//                        startActivity(konsul);
+//                        return true;
+//                    case R.id.navigation_kajian:
+//                        Intent kajian = new Intent(MainActivity.this,ArtikelActivity.class);
+//                        startActivity(kajian);
+//                        return true;
+//                    case R.id.navigation_profil:
+//                        Intent profil = new Intent(MainActivity.this,Profil.class);
+//                        startActivity(profil);
+//                        return true;
+//                }
+//                return false;
+//            }
+//        });
 
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
-//        toggle.syncState();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 //
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
-//        View headerView = navigationView.getHeaderView(0);
-//        TextView navUsername = (TextView) headerView.findViewById(R.id.navUsername);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = (TextView) headerView.findViewById(R.id.navUsername);
 //        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null){
 //            String name = user.getDisplayName();
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity
 
             String uid = user.getUid();
 
-//            navUsername.setText(mail);
+            navUsername.setText(mail);
         }
 
 //        TextView navEmail = (TextView) headerView.findViewById(R.id.navEmail);
@@ -282,38 +282,34 @@ public class MainActivity extends AppCompatActivity
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
-//    @Override
-//    public boolean onNavigationItemSelected(MenuItem item) {
-//        // Handle navigation view item clicks here.
-//        int id = item.getItemId();
-//
-//        if (id == R.id.nav_camera) {
-//            Intent intent = new Intent(MainActivity.this, MainActivity.class);
-//        } else if (id == R.id.nav_gallery) {
-//            intent = new Intent(MainActivity.this, ArtikelActivity.class);
-//            startActivity(intent);
-//        }else if (id == R.id.nav_jadwalshalat) {
-//            intent = new Intent(MainActivity.this, JadwalShalatActivity.class);
-//            startActivity(intent);
-//        } else if (id == R.id.nav_slideshow) {
-//            intent = new Intent(MainActivity.this, GoalsActivity.class);
-//            startActivity(intent);
-//        } else if (id == R.id.nav_compas){
-//            intent = new Intent(MainActivity.this, CompassActivity.class);
-//            startActivity(intent);
-//
-//        } else if (id == R.id.nav_manage) {
-//            intent = new Intent(MainActivity.this, Konsultasi.class);
-//            startActivity(intent);
-//
-//        }  else if (id == R.id.nav_send) {
-//           signOut();
-//        }
-//
-//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
-//        return true;
-//    }
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_camera) {
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        } else if (id == R.id.nav_gallery) {
+            intent = new Intent(MainActivity.this, ArtikelActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_jadwalshalat) {
+            intent = new Intent(MainActivity.this, JadwalShalatActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_slideshow) {
+            intent = new Intent(MainActivity.this, GoalsActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_manage) {
+            intent = new Intent(MainActivity.this, Konsultasi.class);
+            startActivity(intent);
+
+        }  else if (id == R.id.nav_send) {
+           signOut();
+        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
     private void signOut() {
         auth.signOut();

@@ -32,37 +32,37 @@ public class GoalsActivity extends AppCompatActivity implements View.OnClickList
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        Menu menu = navigation.getMenu();
-        MenuItem menuItem = menu.getItem(1);
-        menuItem.setChecked(true);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        Intent intent = new Intent(GoalsActivity.this,MainActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
-                        startActivity(intent);
-                        return true;
-                    case R.id.navigation_goals:
-                        return true;
-                    case R.id.navigation_konsul:
-                        Intent konsul = new Intent(GoalsActivity.this,Konsultasi.class);
-                        startActivity(konsul);
-                        return true;
-                    case R.id.navigation_kajian:
-                        Intent kajian = new Intent(GoalsActivity.this,ArtikelActivity.class);
-                        startActivity(kajian);
-                        return true;
-                    case R.id.navigation_profil:
-                        Intent profil = new Intent(GoalsActivity.this,Profil.class);
-                        startActivity(profil);
-                        return true;
-                }
-                return false;
-            }
-        });
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        Menu menu = navigation.getMenu();
+//        MenuItem menuItem = menu.getItem(1);
+//        menuItem.setChecked(true);
+//        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.navigation_home:
+//                        Intent intent = new Intent(GoalsActivity.this,MainActivity.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+//                        startActivity(intent);
+//                        return true;
+//                    case R.id.navigation_goals:
+//                        return true;
+//                    case R.id.navigation_konsul:
+//                        Intent konsul = new Intent(GoalsActivity.this,Konsultasi.class);
+//                        startActivity(konsul);
+//                        return true;
+//                    case R.id.navigation_kajian:
+//                        Intent kajian = new Intent(GoalsActivity.this,ArtikelActivity.class);
+//                        startActivity(kajian);
+//                        return true;
+//                    case R.id.navigation_profil:
+//                        Intent profil = new Intent(GoalsActivity.this,Profil.class);
+//                        startActivity(profil);
+//                        return true;
+//                }
+//                return false;
+//            }
+//        });
 
         mualaf =  findViewById(R.id.mualaf);
         syahadat =  findViewById(R.id.syahadat);
