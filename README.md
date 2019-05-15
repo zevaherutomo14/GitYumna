@@ -31,7 +31,7 @@ Salah satu solusi dari masalah ini adalah dengan inovasi dalam metode pembinaan 
 #### Device yang digunakan :
 * macbook pro 13 inch touch bar
 * Laptop Windows10
-* SmartPhone android kitkat, nougat dan Oreo
+* Smartphone android kitkat, nougat dan Oreo
 
 # Dokumentasi
 ### Use Case Diagram
