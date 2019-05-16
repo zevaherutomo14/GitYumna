@@ -33,7 +33,7 @@
             android:id="@+id/btn_kuisbersuci"
             android:layout_width="match_parent"
             android:text="Ikuti Kuis Sekarang?"
-            android:textColor="#FF47525E"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_ikutikuis"

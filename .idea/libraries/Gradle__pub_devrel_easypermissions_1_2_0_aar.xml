@@ -5,8 +5,6 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/easypermissions-1.2.0.aar/44ffa38619d0693ce3d66694d7d75e21/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/pub.devrel/easypermissions/1.2.0/fd18a5f9b8f2ed0c7c7812837fab442e4330bafa/easypermissions-1.2.0-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
