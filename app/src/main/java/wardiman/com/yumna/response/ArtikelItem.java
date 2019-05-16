@@ -74,6 +74,7 @@ public class ArtikelItem {
 
     @Override
     public String toString() {
+//        Samakan id artikel item dengan id di PHP nya
         return
                 "ArtikelItem{" +
                         "tempat = '" + tempat + '\''+

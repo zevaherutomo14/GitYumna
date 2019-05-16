@@ -26,15 +26,6 @@ public class DetailArtActivity extends AppCompatActivity {
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         ivGambarArtikel = (ImageView) findViewById(R.id.ivGambarArtikel);
         tvJudulart = (TextView) findViewById(R.id.tvJudulArt);
         tvTglAcara = (TextView) findViewById(R.id.tvTglAcara);

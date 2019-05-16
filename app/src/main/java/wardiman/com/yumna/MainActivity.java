@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+                // Pengecekan apakah sudah login atau belum
                 if (user == null) {
                     // user auth state is changed - user is null
                     // launch login activity
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity
 
         recyclerView = findViewById(R.id.rvListBerita);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        Tanda kutip pada tampilberita untuk search
         tampilBerita("");
 
 //        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -144,6 +146,8 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -162,6 +166,7 @@ public class MainActivity extends AppCompatActivity
 
             String uid = user.getUid();
 
+//          set username dgn email yang dimasukkan
             navUsername.setText(mail);
         }
 
@@ -181,9 +186,10 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-///////////////////////////////////////////////////////////jadwal shalatt//////////////////////
+//////////////////////////////////jadwal shalatt//////////////////////
 
 
+//    Metode menggunakan onClick yang di masukan lsg dari xml nya
     public void jadwalShalat(View view) {
         intent = new Intent(MainActivity.this, JadwalShalatActivity.class);
         startActivity(intent);
@@ -207,6 +213,7 @@ public class MainActivity extends AppCompatActivity
         swipeRefreshLayout.setRefreshing(true);
         apiServices = Server.getApiClient().create(ApiServices.class);
 
+//        getContact("users", key) digunakan untuk kunci dalam search artikel
         Call<List<BeritaItem>> beritaCall = apiServices.getContact("users",key);
 
         beritaCall.enqueue(new Callback<List<BeritaItem>>() {
@@ -233,6 +240,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+// Membuka dan menutup drawer
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -243,6 +251,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+//    Fitur search di lakukan dibawah ini dengan menambahkan di toolbar, maka toolbar wajib ada
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -286,7 +295,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+//      Pemilihan navigation kemana yang harus dituju
         if (id == R.id.nav_camera) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
         } else if (id == R.id.nav_gallery) {
@@ -311,6 +320,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+//    Fungsi logout setelah login
     private void signOut() {
         auth.signOut();
 

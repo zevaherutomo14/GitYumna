@@ -2,6 +2,8 @@ package wardiman.com.yumna.Quiz;
 
 public class SoalPilihanGanda {
 
+//    Array Soal
+
     public String pertanyaan[] = {
             "Mualaf berasal dari bahasa arab yang berarti...",
             "Jika Seseorang yang memutuskan menjadi mualaf meskipun hal tersebut dikarenakan cinta atau pernikahan, salah satu alasan menjeadi mualaf karena ...",
@@ -70,6 +72,8 @@ public class SoalPilihanGanda {
             "Bila kita tidak kuat untuk berdiri maka solat dapat dilakukan dengan cara...",
 
     };
+
+//    Array Pilihan Ganda
 
     private String PilihanJawaban[][] = {
             {"Pasrah","Membangkang","tidak mau tau"},
@@ -146,6 +150,7 @@ public class SoalPilihanGanda {
             {"Rumah","Masjid","Kamar"},
             {"Jongkok","Duduk","Tengkurap"}
     };
+//    Array Jawaban benar
 
     private String jawabanBenar[] = {
             "Pasrah",
@@ -279,6 +284,8 @@ public class SoalPilihanGanda {
         return jawaban3;
     }
 
+//    Sy = Syahadat
+
     public String getPilJwbSy1(int x) {
         String jwbSy1 = PilJwbSy[x][0];
         return jwbSy1;
@@ -293,6 +300,8 @@ public class SoalPilihanGanda {
         String jwbSy3 = PilJwbSy[x][2];
         return jwbSy3;
     }
+
+//    Sc = Bersuci
 
     public String getPilJwbSc1(int x) {
         String jwbSc1 = PilJwbSc[x][0];
@@ -309,6 +318,8 @@ public class SoalPilihanGanda {
         return jwbSc3;
     }
 
+//    Wd =  Wudhu
+
     public String getPilJwbWd1(int x) {
         String jwbWd1 = PilJwbWd[x][0];
         return jwbWd1;
@@ -323,6 +334,8 @@ public class SoalPilihanGanda {
         String jwbWd3 = PilJwbWd[x][2];
         return jwbWd3;
     }
+
+//    Sh = Shalat
 
     public String getPilJwbSh1(int x) {
         String jwbSh1 = PilJwbSh[x][0];
@@ -340,4 +353,3 @@ public class SoalPilihanGanda {
     }
 
 }
-//test soal

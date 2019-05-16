@@ -54,6 +54,7 @@ public class Login extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
+//        Pengecekan apakah sudah login atau belum
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(Login.this, MainActivity.class));
             finish();
@@ -100,6 +101,7 @@ public class Login extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful()) {
                                     // there was an error
+                                    //  Jumlah password minimal 6
                                     if (password.length() < 6) {
                                         txt_password.setError(getString(R.string.minimum_password));
                                     } else {

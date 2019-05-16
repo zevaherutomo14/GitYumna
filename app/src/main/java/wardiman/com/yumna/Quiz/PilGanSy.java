@@ -57,10 +57,6 @@ public class PilGanSy extends AppCompatActivity {
 
     private void setonten() {
         mrbPilihan.clearCheck();
-        //syahadat berarti nama array nya
-        //getsyahadat : pengambilan dari data syahadat
-        //Sesuaikan getPilJwbSy1 dengan yng lain
-        //Sesuaikan getJwbBnrSyahadat dengan yg lain
         arr = soalPG.syahadat.length;
         if (x >= arr){
             String jumlahSkor = String.valueOf(skor);
@@ -91,13 +87,6 @@ public class PilGanSy extends AppCompatActivity {
                 builder.setPositiveButton("OK",null);
                 builder.setView(dialogLayout);
                 builder.show();
-//                builder.setMessage("Jawaban Benar").setCancelable(false)
-//                        .setPositiveButton("Lanjut", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                dialog.cancel();
-//                            }
-//                        }).show();
                 setonten();
             } else {
                 mtvSkor.setText(""+skor);

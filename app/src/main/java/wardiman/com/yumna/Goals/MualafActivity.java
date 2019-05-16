@@ -44,6 +44,7 @@ public class MualafActivity extends AppCompatActivity {
             }
         });
 
+//        untuk menampilkan video dari youtube
         String urlMualaf1 ="<iframe width=\"350\" height=\"350\" src=\"https://www.youtube.com/embed/LH4Te_KiILY\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
         webView.loadData(urlMualaf1, "text/html; charset=utf-8", "UTF-8");
         webView.setWebChromeClient(new WebChromeClient(){
@@ -52,6 +53,7 @@ public class MualafActivity extends AppCompatActivity {
 
     }
 
+    // Tombol pada back toolbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // handle arrow click here

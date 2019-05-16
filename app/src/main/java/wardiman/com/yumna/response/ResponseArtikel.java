@@ -26,6 +26,8 @@ public class ResponseArtikel {
 
     @Override
     public String toString(){
+
+//        Respon yang akan muncul ketika data di get data dgn benar atau tidak
         return
                 "ResponseArtikel{" +
                         "artikel = '" + artikel + '\'' +

@@ -91,13 +91,6 @@ public class PilGanSc extends AppCompatActivity {
                 builder.setPositiveButton("OK",null);
                 builder.setView(dialogLayout);
                 builder.show();
-//                builder.setMessage("Jawaban Benar").setCancelable(false)
-//                        .setPositiveButton("Lanjut", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                dialog.cancel();
-//                            }
-//                        }).show();
                 setonten();
             } else {
                 mtvSkor.setText(""+skor);

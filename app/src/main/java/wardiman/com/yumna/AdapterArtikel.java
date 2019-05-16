@@ -19,8 +19,6 @@ import wardiman.com.yumna.response.ArtikelItem;
 
 public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.MyViewHolder> {
 
-//    hahhhahahhaha
-
     Context context;
     List<ArtikelItem> artikel;
 
@@ -41,6 +39,8 @@ public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+
+//        untuk mengubah text view di navigation drawer
         holder.tvJudulart.setText(artikel.get(position).getJudul());
         holder.tvTempat.setText(artikel.get(position).getTempat());
         holder.tvTanggal.setText(artikel.get(position).getTanggal());
@@ -72,6 +72,7 @@ public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.MyViewHo
         return artikel.size();
     }
 
+//    untuk mendefinisikan apa saja yang akan dilakukan saat get artikel
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         ImageView ivGamberArtikel;

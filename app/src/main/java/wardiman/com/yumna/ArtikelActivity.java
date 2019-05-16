@@ -54,6 +54,7 @@ public class ArtikelActivity extends AppCompatActivity implements SwipeRefreshLa
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         tampilArtikel();
 
+//      Implementasi Bottom Navigation yang belum tercapai karena masih terkendala fragment
 //        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 //        Menu menu = navigation.getMenu();
 //        MenuItem menuItem = menu.getItem(3);

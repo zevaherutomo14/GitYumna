@@ -50,6 +50,7 @@ public class EssayActivity extends AppCompatActivity {
     }
 
 
+
     private void setKonten() {
         medtJawaban.setText(null);
         arr = essay.pertanyaan.length;
