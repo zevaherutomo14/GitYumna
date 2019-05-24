@@ -59,7 +59,6 @@ public class JadwalShalatActivity extends AppCompatActivity implements EasyPermi
     String Date;
     SimpleDateFormat simpletimeformat;
     String Time;
-
     private FloatingActionButton fab_refresh;
 
     @Override
@@ -117,16 +116,16 @@ public class JadwalShalatActivity extends AppCompatActivity implements EasyPermi
 
         return super.onOptionsItemSelected(item);
     }
-//    private void refresh() {
-//        swipeId.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                swipeId.setRefreshing(true);
-//                getJadwal();
-//            }
-//        });
-//
-//    }
+    private void refresh() {
+        swipeId.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipeId.setRefreshing(true);
+                getJadwal();
+            }
+        });
+
+    }
 
     private void getJadwal() {
 

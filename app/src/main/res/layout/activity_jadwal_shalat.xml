@@ -20,7 +20,6 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -72,14 +71,13 @@
             android:gravity="end"/>
 
     </RelativeLayout>
-
     <include layout="@layout/content_jadwal_shalat"/>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_refresh"
-        android:src="@drawable/ic_refresh_white_24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_refresh"-->
+        <!--android:src="@drawable/ic_refresh_white_24dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hello World!"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"/>-->
 </LinearLayout>
